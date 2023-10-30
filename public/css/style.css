@@ -28,6 +28,11 @@
     font-size: 20px;
 }
 
+.navbar-logo img {
+    margin-top: 0px;
+    max-width: 80px;
+}
+
 .navbar-menu {
     display: flex;
     list-style: none;
@@ -101,3 +106,9 @@
     }
 }
 
+
+/* -------------- Footer -------------- */
+
+.footer-container {
+    background-color: #1d1d1d;
+}
