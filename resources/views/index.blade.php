@@ -37,6 +37,12 @@
         <div class="slideshow-slide fade">
             <img src="{{asset('assets/images/games/resident_evil_4_remake.jpg')}}" alt="">
         </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="slideshow-controls">
+            <a class="dot" onclick="currentSlide(1)"></a>
+            <a class="dot" onclick="currentSlide(2)"></a>
+        </div>
     </div>
 
     <div class="footer-container">
