@@ -6,29 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 
-<body>
+<body class="body">
+
     <nav class="navbar">
         <div class="navbar-left">
             <div class="navbar-logo">Nexus.co</div>
             <ul class="navbar-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Games</a></li>
-                <li><a href="#">About Us</a></li>
                 <li><a href="#">Community</a></li>
             </ul>
         </div>
         <div class="navbar-right">
             <div class="search-bar">
-                <img src="https://i.fbcd.co/products/resized/resized-750-500/l004e-17-e03-mainpreview-f3bd24648e8b9810ebe94edb299771121e9257ed8614ba2cb20671fe44970129.jpg" alt="">
+                <img src="{{asset('assets/icons/search_icon.png')}}" alt="">
                 <input type="text" placeholder="Search game....">
-                {{-- <button type="submit">Search</button> --}}
             </div>
         </div>
-
     </nav>
+
+    <div class="slideshow-container">
+        <div class="slideshow-slide fade">
+            <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="{{asset('assets/images/games/resident_evil_4_remake.jpg')}}" alt="">
+        </div>
+    </div>
+
+    <script src="{{asset('js/app.js')}}"></script>
 </body>
 
 </html>
