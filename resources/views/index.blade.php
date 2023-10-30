@@ -24,8 +24,8 @@
         </div>
         <div class="navbar-right">
             <div class="search-bar">
-                <img src="{{asset('assets/icons/search_icon.png')}}" alt="">
-                <input type="text" placeholder="Search game....">
+                <img src="{{asset('assets/icons/search_icon_white.png')}}" alt="">
+                <input type="text" placeholder="Search game">
             </div>
         </div>
     </nav>
@@ -37,11 +37,31 @@
         <div class="slideshow-slide fade">
             <img src="{{asset('assets/images/games/resident_evil_4_remake.jpg')}}" alt="">
         </div>
+        <div class="slideshow-slide fade">
+            <img src="{{asset('assets/images/games/warcraft_3_reforged.jpg')}}" alt="">
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="{{asset('assets/images/games/avatar.jpg')}}" alt="">
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="{{asset('assets/images/games/anno_1800.jpg')}}" alt="">
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="{{asset('assets/images/games/farcry_6.jpg')}}" alt="">
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="{{asset('assets/images/games/red_dead_redemption_2.jpg')}}" alt="">
+        </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
         <div class="slideshow-controls">
             <a class="dot" onclick="currentSlide(1)"></a>
             <a class="dot" onclick="currentSlide(2)"></a>
+            <a class="dot" onclick="currentSlide(3)"></a>
+            <a class="dot" onclick="currentSlide(4)"></a>
+            <a class="dot" onclick="currentSlide(5)"></a>
+            <a class="dot" onclick="currentSlide(6)"></a>
+            <a class="dot" onclick="currentSlide(7)"></a>
         </div>
     </div>
 
