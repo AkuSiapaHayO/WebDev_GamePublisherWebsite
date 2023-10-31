@@ -28,6 +28,8 @@
             </div>
         </div>
 
+        <img src="{{ asset }}" alt="">
+
     </nav>
 </body>
 
