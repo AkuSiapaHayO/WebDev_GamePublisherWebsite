@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nexus.co | Welcome to the official Nexus.co Website</title>
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body class="body">
@@ -14,7 +14,7 @@
     <nav class="navbar">
         <div class="navbar-left">
             <div class="navbar-logo">
-                <img src="{{asset('assets/images/others/nexus.co.png')}}" alt="">
+                <img src="{{ asset('assets/images/others/nexus.co.png') }}" alt="">
             </div>
             <ul class="navbar-menu">
                 <li><a href="#">Home</a></li>
@@ -24,52 +24,56 @@
         </div>
         <div class="navbar-right">
             <div class="search-bar">
-                <img src="{{asset('assets/icons/search_icon_white.png')}}" alt="">
+                <img src="{{ asset('assets/icons/search_icon_white.png') }}" alt="">
                 <input type="text" placeholder="Search game">
             </div>
         </div>
     </nav>
 
-    <div class="slideshow-container">
-        <div class="slideshow-slide fade">
-            <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            </div>
+            <div class="item">
+                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            </div>
+            <div class="item">
+                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            </div>
+            <div class="item">
+                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            </div>
+            <div class="item">
+                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            </div>
+            <div class="item">
+                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            </div>
+            <div class="item">
+                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            </div>
         </div>
-        <div class="slideshow-slide fade">
-            <img src="{{asset('assets/images/games/resident_evil_4_remake.jpg')}}" alt="">
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
         </div>
-        <div class="slideshow-slide fade">
-            <img src="{{asset('assets/images/games/warcraft_3_reforged.jpg')}}" alt="">
-        </div>
-        <div class="slideshow-slide fade">
-            <img src="{{asset('assets/images/games/avatar.jpg')}}" alt="">
-        </div>
-        <div class="slideshow-slide fade">
-            <img src="{{asset('assets/images/games/anno_1800.jpg')}}" alt="">
-        </div>
-        <div class="slideshow-slide fade">
-            <img src="{{asset('assets/images/games/farcry_6.jpg')}}" alt="">
-        </div>
-        <div class="slideshow-slide fade">
-            <img src="{{asset('assets/images/games/red_dead_redemption_2.jpg')}}" alt="">
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        <div class="slideshow-controls">
-            <a class="dot" onclick="currentSlide(1)"></a>
-            <a class="dot" onclick="currentSlide(2)"></a>
-            <a class="dot" onclick="currentSlide(3)"></a>
-            <a class="dot" onclick="currentSlide(4)"></a>
-            <a class="dot" onclick="currentSlide(5)"></a>
-            <a class="dot" onclick="currentSlide(6)"></a>
-            <a class="dot" onclick="currentSlide(7)"></a>
-        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
 
     <div class="footer-container">
 
     </div>
 
-    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>
