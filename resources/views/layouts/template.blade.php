@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nexus.co | Welcome to the official Nexus.co Website</title>
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/others/nexus.co.png') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
@@ -30,7 +31,7 @@
         </div>
     </nav>
 
-    
+    @yield('layout')
 
     <div class="footer-container">
         <div class="footer-content">
