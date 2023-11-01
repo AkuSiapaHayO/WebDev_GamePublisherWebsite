@@ -1,8 +1,8 @@
-let slider = document.querySelector('.slider .list');
-let items = document.querySelectorAll('.slider .list .item');
+let slider = document.querySelector('.slideshow .slideshow-slides');
+let items = document.querySelectorAll('.slideshow .slideshow-slides .slideshow-image');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
-let dots = document.querySelectorAll('.slider .dots li');
+let dots = document.querySelectorAll('.slideshow .dots li');
 
 let lengthItems = items.length - 1;
 let active = 0;
@@ -18,12 +18,12 @@ let refreshInterval = setInterval(()=> {next.click()}, 10000);
 function reloadSlider(){
     slider.style.left = -items[active].offsetLeft + 'px';
     // 
-    let last_active_dot = document.querySelector('.slider .dots li.active');
+    let last_active_dot = document.querySelector('.slideshow .dots li.active');
     last_active_dot.classList.remove('active');
     dots[active].classList.add('active');
 
     clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 3000);
+    refreshInterval = setInterval(()=> {next.click()}, 10000);
 
     
 }

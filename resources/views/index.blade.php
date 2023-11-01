@@ -30,28 +30,28 @@
         </div>
     </nav>
 
-    <div class="slider">
-        <div class="list">
-            <div class="item">
+    <div class="slideshow">
+        <div class="slideshow-slides">
+            <div class="slideshow-image">
                 <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
             </div>
-            <div class="item">
-                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            <div class="slideshow-image">
+                <img src="{{asset('assets/images/games/anno_1800.jpg')}}" alt="">
             </div>
-            <div class="item">
-                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            <div class="slideshow-image">
+                <img src="{{asset('assets/images/games/avatar.jpg')}}" alt="">
             </div>
-            <div class="item">
-                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            <div class="slideshow-image">
+                <img src="{{asset('assets/images/games/farcry_6.jpg')}}" alt="">
             </div>
-            <div class="item">
-                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            <div class="slideshow-image">
+                <img src="{{asset('assets/images/games/red_dead_redemption_2.jpg')}}" alt="">
             </div>
-            <div class="item">
-                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            <div class="slideshow-image">
+                <img src="{{asset('assets/images/games/warcraft_3_reforged.jpg')}}" alt="">
             </div>
-            <div class="item">
-                <img src="{{asset('assets/images/games/assassins_creed_mirage.png')}}" alt="">
+            <div class="slideshow-image">
+                <img src="{{asset('assets/images/games/resident_evil_4_remake.jpg')}}" alt="">
             </div>
         </div>
         <div class="buttons">
@@ -70,7 +70,9 @@
     </div>
 
     <div class="footer-container">
-
+        <div>
+            
+        </div>
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
