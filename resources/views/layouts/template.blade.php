@@ -30,44 +30,7 @@
         </div>
     </nav>
 
-    <div class="slideshow">
-        <div class="slideshow-slides">
-            <div class="slideshow-image">
-                <img src="{{ asset('assets/images/games/assassins_creed_mirage.png') }}" alt="">
-            </div>
-            <div class="slideshow-image">
-                <img src="{{ asset('assets/images/games/anno_1800.jpg') }}" alt="">
-            </div>
-            <div class="slideshow-image">
-                <img src="{{ asset('assets/images/games/avatar.jpg') }}" alt="">
-            </div>
-            <div class="slideshow-image">
-                <img src="{{ asset('assets/images/games/farcry_6.jpg') }}" alt="">
-            </div>
-            <div class="slideshow-image">
-                <img src="{{ asset('assets/images/games/red_dead_redemption_2.jpg') }}" alt="">
-            </div>
-            <div class="slideshow-image">
-                <img src="{{ asset('assets/images/games/warcraft_3_reforged.jpg') }}" alt="">
-            </div>
-            <div class="slideshow-image">
-                <img src="{{ asset('assets/images/games/resident_evil_4_remake.jpg') }}" alt="">
-            </div>
-        </div>
-        <div class="buttons">
-            <button id="prev"><</button>
-                    <button id="next">></button>
-        </div>
-        <ul class="dots">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+    
 
     <div class="footer-container">
         <div class="footer-content">
@@ -85,6 +48,7 @@
             </ul>
             <div class="footer-copyright">
                 <div class="footer-copyright-image">
+                    {{-- <img src="{{ asset('assets/images/games/copyright.png') }}" alt=""> --}}
                     <p>&#169; 2023 Nexus Entertainment, Inc.</p>
                 </div>
                 <p>All <span>trademarks</span> referenced herein are the properties of their respective owners</p>
