@@ -20,7 +20,6 @@
             <ul class="navbar-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Games</a></li>
-                <li><a href="#">Community</a></li>
             </ul>
         </div>
         <div class="navbar-right">
@@ -42,6 +41,8 @@
                 <li><a href="#">ABOUT US</a></li>
                 <p class="line">|</p>
                 <li><a href="#">CONTACT US</a></li>
+                <p class="line">|</p>
+                <li><a href="#">COMMUNITY</a></li>
                 <p class="line">|</p>
                 <li><a href="#">SUPPORT</a> </li>
                 <p class="line">|</p>
