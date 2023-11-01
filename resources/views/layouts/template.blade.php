@@ -5,30 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nexus.co | Welcome to the official Nexus.co Website</title>
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/others/nexus.co.png') }}">
+    <title>Nexus.co</title>
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/others/nexus.co_logo.png') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
-
-    <nav class="navbar">
-        <div class="navbar-left">
-            <div class="navbar-logo">
-                <img src="{{ asset('assets/images/others/nexus.co.png') }}" alt="">
+    <header>
+        <nav>
+            <img src="{{ asset('assets/images/others/nexus.co_logo.png') }}" alt="">
+            <div class="navbar">
+                <ul>
+                    <li><a class="nav-link" href="#">Home</a></li>
+                    <li><a class="nav-link" href="#">Games</a></li>
+                </ul>
             </div>
-            <ul class="navbar-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Games</a></li>
-            </ul>
-        </div>
-        <div class="navbar-right">
             <div class="search-bar">
-                <img src="{{ asset('assets/icons/search_icon.png') }}" alt="">
+                <img src="{{ asset('assets/icons/search_icon_white.png') }}" alt="">
                 <input type="text" placeholder="Search game">
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     @yield('layout')
 
@@ -50,7 +47,6 @@
             </ul>
             <div class="footer-copyright">
                 <div class="footer-copyright-image">
-                    {{-- <img src="{{ asset('assets/images/games/copyright.png') }}" alt=""> --}}
                     <p>&#169; 2023 Nexus Entertainment, Inc.</p>
                 </div>
                 <p>All <span>trademarks</span> referenced herein are the properties of their respective owners</p>

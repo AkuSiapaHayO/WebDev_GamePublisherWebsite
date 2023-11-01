@@ -3,9 +3,23 @@ let items = document.querySelectorAll('.slideshow .slideshow-slides .slideshow-i
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let dots = document.querySelectorAll('.slideshow .dots li');
-
 let lengthItems = items.length - 1;
 let active = 0;
+
+const header = document.querySelector("header");
+
+/* -------------- Nav -------------- */
+
+function stickyNavbar() {
+    header.classList.toggle("scrolled", window.scrollY > 0)
+}
+
+stickyNavbar();
+
+window.addEventListener("scroll", stickyNavbar);
+
+/* -------------- Slideshow -------------- */
+
 next.onclick = function(){
     active = active + 1 <= lengthItems ? active + 1 : 0;
     reloadSlider();
@@ -14,7 +28,7 @@ prev.onclick = function(){
     active = active - 1 >= 0 ? active - 1 : lengthItems;
     reloadSlider();
 }
-let refreshInterval = setInterval(()=> {next.click()}, 10000);
+let refreshInterval = setInterval(()=> {next.click()}, 50000);
 function reloadSlider(){
     slider.style.left = -items[active].offsetLeft + 'px';
     // 
@@ -23,7 +37,7 @@ function reloadSlider(){
     dots[active].classList.add('active');
 
     clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 10000);
+    refreshInterval = setInterval(()=> {next.click()}, 50000);
 
     
 }
@@ -37,3 +51,4 @@ dots.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider();
 };
+
