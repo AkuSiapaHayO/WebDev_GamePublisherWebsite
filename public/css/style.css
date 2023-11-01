@@ -287,4 +287,15 @@ body {
 .content-1-image img {
     width: 700px;
     border-radius: 30px;
+    transition: 200ms;
 }
+
+/* from gavin */
+.content-1-image:hover img{
+    width: 750px;
+    transition: 200ms;
+}
+
+/* *{
+    outline: solid 1px red;
+} */
