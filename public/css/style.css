@@ -4,6 +4,8 @@ body {
     font-family: "Roboto";
     overflow-x: hidden;
     background-color: #202020;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -23,17 +25,31 @@ header {
     width: 100%;
     z-index: 10;
     transition: 0.3s;
-    height: 120px;
-    line-height: 120px;
 }
 
 header.scrolled {
     background-color: var(--bg-color-transparent);
     box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15px);
+}
+
+.logo {
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    height: 120px;
+    line-height: 120px;
+}
+
+header.scrolled .logo {
     height: 80px;
     line-height: 80px;
 }
+
 
 nav {
     position: relative;
@@ -53,6 +69,7 @@ nav img {
     flex: 1;
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
 
 .navbar ul {
@@ -80,7 +97,7 @@ nav img {
     width: 0;
     height: 10px;
     border-radius: 5px;
-    background-color: red;
+    background-color: rgb(128, 128, 128);
     bottom: 0;
     left: -5px;
     z-index: -1;
@@ -89,7 +106,7 @@ nav img {
 }
 
 .nav-link:hover {
-    color: red;
+    color: rgb(139, 139, 139);
 }
 
 .nav-link:hover::after {
@@ -140,6 +157,7 @@ nav img {
     margin-top: 120px;
     position: relative;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .slideshow-slides {
@@ -272,7 +290,7 @@ nav img {
 /* -------------- Content 1 -------------- */
 
 .content-1 {
-    margin-top: 50px;
+    max-width: 1440px;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
@@ -281,19 +299,23 @@ nav img {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .content-1 p {
     font-weight: 300;
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 20px;
 }
 
 .content-1 h1 {
     margin: 0;
+    font-size: 20px;
 }
 
 .content-1-image img {
-    width: 700px;
+    width: 500px;
     border-radius: 30px;
 }

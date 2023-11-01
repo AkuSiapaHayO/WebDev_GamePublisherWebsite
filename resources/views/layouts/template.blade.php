@@ -13,7 +13,9 @@
 <body>
     <header>
         <nav>
-            <img src="{{ asset('assets/images/others/nexus.co_logo.png') }}" alt="">
+            <div class="logo">
+                <img src="{{ asset('assets/images/others/nexus.co_logo.png') }}" alt="">
+            </div>
             <div class="navbar">
                 <ul>
                     <li><a class="nav-link" href="#">Home</a></li>
