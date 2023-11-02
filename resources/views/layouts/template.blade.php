@@ -14,7 +14,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="{{ asset('assets/images/others/nexus.co_logo.png') }}" alt="">
+                <img src="{{ asset('assets/images/logo/nexus.co_logo.png') }}" alt="">
             </div>
             <div class="navbar">
                 <ul>
@@ -34,7 +34,7 @@
     <div class="footer-container">
         <div class="footer-content">
             <div class="footer-image">
-                <img src="{{ asset('assets/images/others/nexus.co.png') }}" alt="">
+                <img src="{{ asset('assets/images/logo/nexus.co.png') }}" alt="">
             </div>
             <ul>
                 <li><a href="#">ABOUT US</a></li>
