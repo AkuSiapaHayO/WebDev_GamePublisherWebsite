@@ -61,21 +61,30 @@
     <section class="content-2">
         <div class="content-2-container">
             <div class="content-2-grid">
+
+                @foreach ($randomFranchises as $i => $franchise)
+                    @if ($i == 0)
+                        @php($franchise1 = $franchise)
+                    @elseif ($i == 1)
+                        @php($franchise2 = $franchise)
+                    @elseif ($i == 2)
+                        @php($franchise3 = $franchise)
+                    @elseif ($i == 3)
+                        @php($franchise4 = $franchise)
+                    @endif
+                @endforeach
+
                 <div class="content-2-card">
-                    <img src="{{asset('assets/images/games/warcraft.png')}}" alt="">
-                    {{-- <h3>Warcraft</h3> --}}
+                    <img src="{{ asset('assets/database/franchise/' . $franchise1->f_image) }}" alt="">
                 </div>
                 <div class="content-2-card">
-                    <img src="{{asset('assets/images/games/resident_evil_logo.png')}}" alt="">
-                    {{-- <h3>Resident Evil</h3> --}}
+                    <img src="{{ asset('assets/database/franchise/' . $franchise2->f_image) }}" alt="">
                 </div>
                 <div class="content-2-card">
-                    <img src="{{asset('assets/images/games/farcry_logo.png')}}" alt="">
-                    {{-- <h3>Farcry</h3> --}}
+                    <img src="{{ asset('assets/database/franchise/' . $franchise3->f_image) }}" alt="">
                 </div>
                 <div class="content-2-card">
-                    <img src="{{asset('assets/images/games/assassins_creed_logo.png')}}" alt="">
-                    {{-- <h3>Assassin's Creed</h3> --}}
+                    <img src="{{ asset('assets/database/franchise/' . $franchise4->f_image) }}" alt="">
                 </div>
             </div>
             <div class="content-2-info">
