@@ -20,8 +20,8 @@ class GenreSeeder extends Seeder
         Genre::create(['name' => 'Strategy']);
         Genre::create(['name' => 'Sports']);
         Genre::create(['name' => 'Shooter']);
-        Genre::create(['name' => 'Survival Horror']);
-        Genre::create(['name' => 'Open World']);
-        Genre::create(['name' => 'City Building']);
+        Genre::create(['name' => 'Survival-Horror']);
+        Genre::create(['name' => 'Open-World']);
+        Genre::create(['name' => 'City-Building']);
     }
 }

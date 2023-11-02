@@ -612,6 +612,11 @@ nav img {
     padding: 75px;
 }
 
+.foreach {
+    display: flex;
+    justify-content: space-between;
+}
+
 .showcase-left {
     display: flex;
     flex-direction: column;
@@ -708,7 +713,6 @@ nav img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
     text-align: center;
 }
 
@@ -719,6 +723,8 @@ nav img {
 }
 
 .content-3-dots {
+    position: absolute;
+    bottom: 50px;
     color: white;
     width: 100%;
     margin: 0;

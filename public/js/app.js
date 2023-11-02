@@ -28,7 +28,16 @@ prev.onclick = function(){
     active = active - 1 >= 0 ? active - 1 : lengthItems;
     reloadSlider();
 }
-let refreshInterval1 = setInterval(()=> {next.click()}, 10000);
+
+let refreshInterval1 = setInterval(() => {
+    if (active < lengthItems) {
+        active++;
+    } else {
+        active = 0;
+    }
+    reloadSlider();
+}, 5000);
+
 function reloadSlider(){
     slider.style.left = -items[active].offsetLeft + 'px';
     // 
@@ -36,16 +45,13 @@ function reloadSlider(){
     last_active_dot.classList.remove('active');
     dots[active].classList.add('active');
 
-    clearInterval(refreshInterval1);
-    refreshInterval1 = setInterval(()=> {next.click()}, 10000);
-
-    
 }
 
 dots.forEach((li, key) => {
     li.addEventListener('click', ()=>{
          active = key;
          reloadSlider();
+         clearInterval(refreshInterval1)
     })
 })
 
@@ -70,7 +76,7 @@ let refreshInterval2 = setInterval(() => {
         active2 = 0;
     }
     reloadSlider2();
-}, 10000); // Auto slide every 5 seconds (5000 milliseconds)
+}, 5000); // Auto slide every 5 seconds (5000 milliseconds)
 
 function reloadSlider2() {
     slider2.style.left = -items2[active2].offsetLeft + 'px';
@@ -95,22 +101,6 @@ images2.forEach((li, key) => {
         clearInterval(refreshInterval2);
     });
 });
-
-// // Clear and reset the auto slide interval when the user interacts with the slideshow
-// slider2.addEventListener('mouseenter', () => {
-//     clearInterval(refreshInterval2);
-// });
-
-// slider2.addEventListener('mouseleave', () => {
-//     refreshInterval2 = setInterval(() => {
-//         if (active2 < lengthItems2) {
-//             active2++;
-//         } else {
-//             active2 = 0;
-//         }
-//         reloadSlider2();
-//     }, 5000); // Auto slide every 5 seconds (5000 milliseconds)
-// });
 
 window.onresize = function(event) {
     reloadSlider2();

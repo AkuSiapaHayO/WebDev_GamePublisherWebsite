@@ -119,35 +119,28 @@
             <div class="showcase-background">
                 <img class="background" src="{{ asset('assets/images/games/anno_1800.jpg') }}" alt="">
                 <div class="showcase-1">
-                    <div class="showcase-left">
-                        <div class="upper-left">
-                            <p class="sub-heading">Featured Games</p>
-                            <p class="heading">Anno 1800</p>
+                    <div class="foreach">
+                        <div class="showcase-left">
+                            <div class="upper-left">
+                                <p class="sub-heading">Featured Games</p>
+                                <p class="heading">Anno 1800</p>
+                            </div>
+                            <div class="lower-left">
+                                <p class="text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio quibusdam dolorem
+                                    molestiae cum autem, suscipit ducimus provident odio nulla, repellendus magni eius
+                                    perspiciatis quidem itaque optio quas, officia voluptas.
+                                </p>
+                                <a href="#">
+                                    <button class="content-3-buttons">More Details</button>
+                                </a>
+                            </div>
                         </div>
-                        <div class="lower-left">
-                            <p class="text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio quibusdam dolorem
-                                molestiae cum autem, suscipit ducimus provident odio nulla, repellendus magni eius
-                                perspiciatis quidem itaque optio quas, officia voluptas.
-                            </p>
-                            <a href="#">
-                                <button class="content-3-buttons">More Details</button>
-                            </a>
+                        <div class="showcase-center">
+                            <div>
+                                <img src="{{ asset('assets/database/game/anno_1800.jpg') }}" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="showcase-center">
-                        <div>
-                            <img src="{{ asset('assets/database/game/anno_1800.jpg') }}" alt="">
-                        </div>
-                        <ul class="content-3-dots">
-                            <li class="active"></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
                     </div>
                     <div class="showcase-right">
                         <div class="upper-right">
@@ -160,6 +153,15 @@
                         </div>
                     </div>
                 </div>
+                <ul class="content-3-dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
         </div>
     </section>
