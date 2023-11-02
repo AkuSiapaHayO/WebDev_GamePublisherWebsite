@@ -58,6 +58,7 @@ window.onresize = function(event) {
 let slider2 = document.querySelector('.content-2-slideshow .content-2-slideshow-slides');
 let items2 = document.querySelectorAll('.content-2-slideshow .content-2-slideshow-slides .content-2-slideshow-image');
 let dots2 = document.querySelectorAll('.content-2-slideshow .content-2-dots li');
+let images2 = document.querySelectorAll('.content-2-grid li');
 let lengthItems2 = items2.length - 1;
 let active2 = 0;
 
@@ -83,6 +84,15 @@ dots2.forEach((li, key) => {
     li.addEventListener('click', () => {
         active2 = key;
         reloadSlider2();
+        clearInterval(refreshInterval2);
+    });
+});
+
+images2.forEach((li, key) => {
+    li.addEventListener('click', () => {
+        active2 = key;
+        reloadSlider2();
+        clearInterval(refreshInterval2);
     });
 });
 

@@ -31,7 +31,7 @@ class FranchiseSeeder extends Seeder
                             weapons. The franchise has terrified players for decades with its 
                             atmospheric tension, intricate puzzles, and thrilling narratives 
                             as they navigate through outbreaks of viral horrors.",
-            'f_image' => 'resident_evil_logo.png',
+            'f_image' => 'resident_evil_umbrella.png',
         ]);
 
         Franchise::create([
