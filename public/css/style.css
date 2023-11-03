@@ -145,19 +145,20 @@ nav img {
 
 /* -------------- Slideshow -------------- */
 
-.content-slideshow {
+.content {
     padding-bottom: 200px;
+    margin-top: 120px;
 }
 
 .slideshow {
-    width: 1250px;
-    max-width: 100vw;
-    height: 700px;
+    width: 1440px;
+    max-width: 100%;
+    height: 800px;
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
     margin: auto;
-    margin-top: 120px;
+    display: flex;
+    justify-content: center;
 }
 
 .slideshow-slides {
@@ -171,8 +172,7 @@ nav img {
 }
 
 .slideshow-image img {
-    width: 1250px;
-    max-width: 100vw;
+    width: 1440px;
     height: 100%;
     object-fit: cover;
 }
@@ -298,9 +298,7 @@ nav img {
 }
 
 .content-1-container {
-    max-width: 1440px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    max-width: 100%;
     background-color: #202020;
     display: flex;
     align-items: center;
@@ -319,9 +317,14 @@ nav img {
     font-weight: 700;
 }
 
-.content-1-image img {
+.content-1-image {
     width: 650px;
+}
+
+.content-1-image img {
+    width: 100%;
     border-radius: 30px;
+    object-fit: cover;
 }
 
 .content-1-text {
@@ -362,7 +365,7 @@ nav img {
     grid-template-columns: 1.05fr 1fr;
     align-items: center;
     position: relative;
-    max-width: 1440px;
+    max-width: 100%;
     margin: auto;
 }
 
@@ -474,7 +477,7 @@ nav img {
     font-size: 0.9rem;
     line-height: 2.3;
     color: white;
-    width: 600px;
+    max-width: 600px;
 }
 
 .content-2-cta {
@@ -533,8 +536,8 @@ nav img {
 }
 
 .content-2-slideshow {
-    width: 600px;
-    max-width: 100vw;
+    max-width: 600px;
+    /* max-width: 100vw; */
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -591,10 +594,12 @@ nav img {
 .content-3-slideshow {
     position: relative;
     width: 1440px;
-    max-width: 100vw;
-    height: 750px;
+    max-width: 100%;
+    height: 800px;
     overflow: hidden;
     margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .content-3-slideshow-slides {
@@ -610,13 +615,12 @@ nav img {
 .content-3-slideshow-content {
     position: relative;
     width: 1440px;
-    height: 750px;
+    height: 100%;
 }
 
 .content-3-slideshow-images img {
     width: 1440px;
-    max-width: 100vw;
-    height: 750px;
+    height: 800px;
     object-fit: cover;
 }
 
@@ -627,7 +631,7 @@ nav img {
     justify-content: space-between;
     background-color: rgb(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
-    height: 600px;
+    height: 650px;
     width: 1290px;
     z-index: 9;
     padding: 75px;
@@ -653,10 +657,16 @@ nav img {
     text-align: center;
 }
 
-.showcase-center img {
-    width: 350px;
-    height: 500px;
+.showcase-image {
+    max-width: 350px;
+    max-height: 500px;
+}
+
+.showcase-image img {
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .content-3-sub-heading {
@@ -778,6 +788,10 @@ nav img {
 
 @media screen and (min-width: 1450px){
     .content-3-slideshow {
+        border-radius: 20px;
+    }
+
+    .slideshow {
         border-radius: 20px;
     }
 }

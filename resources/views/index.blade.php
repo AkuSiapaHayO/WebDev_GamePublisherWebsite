@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('layout')
-    <section class="content-slideshow">
+    <section class="content">
         <div class="slideshow">
             <div class="slideshow-slides">
                 @foreach ($randomEvents as $event)
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="showcase-center">
-                                <div>
+                                <div class="showcase-image">
                                     <img src="{{ asset('assets/database/game/' . $game->g_image) }}" alt="">
                                 </div>
                             </div>
