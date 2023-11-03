@@ -4,28 +4,11 @@
     <section class="content-slideshow">
         <div class="slideshow">
             <div class="slideshow-slides">
-                <div class="slideshow-image">
-                    <img src="{{ asset('assets/database/background/assassins_creed_mirage.png') }}" alt="">
-                </div>
-                <div class="slideshow-image">
-                    <img src="{{ asset('assets/database/background/anno_1800.jpg') }}" alt="">
-                </div>
-                <div class="slideshow-image">
-                    <img src="{{ asset('assets/database/background/avatar.jpg') }}" alt="">
-                </div>
-                <div class="slideshow-image">
-                    <img src="{{ asset('assets/database/background/farcry_6.jpg') }}" alt="">
-                </div>
-                <div class="slideshow-image">
-                    <img src="{{ asset('assets/database/background/red_dead_redemption_2.jpg') }}" alt="">
-
-                </div>
-                <div class="slideshow-image">
-                    <img src="{{ asset('assets/database/background/warcraft_3_reforged.jpg') }}" alt="">
-                </div>
-                <div class="slideshow-image">
-                    <img src="{{ asset('assets/database/background/resident_evil_4_remake.jpg') }}" alt="">
-                </div>
+                @foreach ($randomEvents as $event)
+                    <div class="slideshow-image">
+                        <img src="{{ asset('assets/database/events/' . $event->e_image) }}" alt="">
+                    </div>
+                @endforeach
             </div>
             <div class="slideshow-buttons">
                 <button id="prev">
@@ -34,12 +17,11 @@
             </div>
             <ul class="dots">
                 <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                @foreach ($randomGames as $i => $game)
+                    @if ($i < 6)
+                        <li></li>
+                    @endif
+                @endforeach
             </ul>
         </div>
     </section>
@@ -70,7 +52,6 @@
                         <div class="content-3-showcase">
                             <div class="showcase-left">
                                 <div class="upper-left">
-                                    <p class="content-3-sub-heading">Featured Games</p>
                                     <p class="content-3-heading">{{ $game->title }}</p>
                                 </div>
                                 <div class="lower-left">
@@ -94,6 +75,9 @@
                     </div>
                 @endforeach
             </div>
+            <div>
+                <p class="content-3-sub-heading">Featured Games</p>
+            </div>
             <div class="content-3-buttons">
                 <button id="back">
                     < </button>
@@ -101,12 +85,9 @@
             </div>
             <ul class="content-3-dots">
                 <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                @foreach ($randomGames as $game)
+                    <li></li>
+                @endforeach
             </ul>
         </div>
     </section>
@@ -157,9 +138,12 @@
                 </div>
                 <ul class="content-2-dots">
                     <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+
+                    @foreach ($randomFranchises as $i => $franchise)
+                        @if ($i < 3)
+                            <li></li>
+                        @endif
+                    @endforeach
                 </ul>
             </div>
         </div>
