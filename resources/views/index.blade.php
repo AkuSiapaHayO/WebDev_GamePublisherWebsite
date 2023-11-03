@@ -2,6 +2,7 @@
 
 @section('layout')
     <section class="content">
+
         <div class="slideshow">
             <div class="slideshow-slides">
                 @foreach ($randomEvents as $event)
@@ -125,9 +126,11 @@
                     @foreach ($randomFranchises as $franchise)
                         <div class="content-2-slideshow-image">
                             <div class="content-2-info">
-                                <h3 class="content-2-sub-heading">Franchises</h3>
-                                <h1 class="content-2-heading">{{ $franchise->name }}</h1>
-                                <p class="content-2-text">{{ $franchise->description }}</p>
+                                <div class="main-info">
+                                    <h3 class="content-2-sub-heading">Franchises</h3>
+                                    <h1 class="content-2-heading">{{ $franchise->name }}</h1>
+                                    <p class="content-2-text">{{ $franchise->description }}</p>
+                                </div>
                                 <div class="content-2-cta">
                                     <a href="#" class="content-2-btn">Franchise Details</a>
                                     <a href="#" class="content-2-btn content-2-secondary-btn">See All Franchises</a>
