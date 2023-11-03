@@ -30,7 +30,7 @@
     <section class="content-1">
         <div class="content-1-container">
             <div class="content-1-text">
-                <p class="content-1-heading">WELCOME TO NEXUS ENTERTAINMENT</p>
+                <p class="content-1-heading">NEXUS ENTERTAINMENT</p>
                 <p class="content-1-sub-heading">Dive into the extraordinary world of gaming with us</p>
                 <a href="">
                     <button class="content-1-buttons">Explore More</button>
@@ -53,6 +53,7 @@
                         <div class="content-3-showcase">
                             <div class="showcase-left">
                                 <div class="upper-left">
+                                    <p class="content-3-sub-heading">Featured Games</p>
                                     <p class="content-3-heading">{{ $game->title }}</p>
                                 </div>
                                 <div class="lower-left">
@@ -75,9 +76,6 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
-            <div>
-                <p class="content-3-sub-heading">Featured Games</p>
             </div>
             <div class="content-3-buttons">
                 <button id="back">

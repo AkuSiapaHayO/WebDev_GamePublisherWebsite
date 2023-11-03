@@ -8,6 +8,7 @@
     <title>Nexus.co</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/images/logo/nexus.co_logo.png') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
 </head>
 
 <body>
@@ -18,8 +19,8 @@
             </div>
             <div class="navbar">
                 <ul>
-                    <li><a class="nav-link" href="#">Home</a></li>
-                    <li><a class="nav-link" href="#">Games</a></li>
+                    <li><a class="nav-link" href="/">Home</a></li>
+                    <li><a class="nav-link" href="/viewGames">Games</a></li>
                 </ul>
             </div>
             <div class="search-bar">
@@ -38,14 +39,10 @@
             </div>
             <ul>
                 <li><a href="#">ABOUT US</a></li>
-                <p class="line">|</p>
                 <li><a href="#">CONTACT US</a></li>
-                <p class="line">|</p>
                 <li><a href="#">COMMUNITY</a></li>
-                <p class="line">|</p>
                 <li><a href="#">SUPPORT</a> </li>
-                <p class="line">|</p>
-                <li class="last"><a href="#">CAREERS</a></li>
+                <li><a class="last" href="#">CAREERS</a></li>
             </ul>
             <div class="footer-copyright">
                 <div class="footer-copyright-image">

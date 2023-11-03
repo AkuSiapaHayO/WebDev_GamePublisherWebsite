@@ -8,10 +8,9 @@ use App\Http\Requests\UpdateGameRequest;
 
 class GameController extends Controller
 {
-    // public function showRandomGames()
-    // {
-    //     return view("index", [
-    //         "randomGames"=> Game::inRandomOrder()->distinct()->take(7)->get()
-    //     ]);
-    // }
+    public function index() {
+        $games = Game::all();
+
+        return view("viewGames", compact("games"));
+    }
 }
