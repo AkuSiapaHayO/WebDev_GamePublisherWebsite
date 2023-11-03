@@ -105,3 +105,52 @@ images2.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider2();
 };
+
+/* -------------- Slideshow 3 -------------- */
+
+let slider3 = document.querySelector('.content-3-slideshow .content-3-slideshow-slides');
+let items3 = document.querySelectorAll('.content-3-slideshow .content-3-slideshow-slides .content-3-slideshow-content');
+let next3 = document.getElementById('forward');
+let prev3 = document.getElementById('back');
+let dots3 = document.querySelectorAll('.content-3-slideshow .content-3-dots li');
+let lengthItems3 = items3.length - 1;
+let active3 = 0;
+
+next3.onclick = function(){
+    active3 = active3 + 1 <= lengthItems3 ? active3 + 1 : 0;
+    reloadSlider3();
+}
+prev3.onclick = function(){
+    active3 = active3 - 1 >= 0 ? active3 - 1 : lengthItems3;
+    reloadSlider3();
+}
+
+let refreshInterval3 = setInterval(() => {
+    if (active3 < lengthItems3) {
+        active3++;
+    } else {
+        active3 = 0;
+    }
+    reloadSlider3();
+}, 5000);
+
+function reloadSlider3(){
+    slider3.style.left = -items3[active3].offsetLeft + 'px';
+    // 
+    let last_active_dot = document.querySelector('.content-3-slideshow .content-3-dots li.active');
+    last_active_dot.classList.remove('active');
+    dots3[active3].classList.add('active');
+
+}
+
+dots3.forEach((li, key) => {
+    li.addEventListener('click', ()=>{
+         active3 = key;
+         reloadSlider3();
+         clearInterval(refreshInterval3)
+    })
+})
+
+window.onresize = function(event) {
+    reloadSlider3();
+};

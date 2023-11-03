@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->date('releaseDate');
             $table->integer('price');
             $table->string('g_image');
+            $table->string('background_image');
             $table->string('processor');
             $table->string('gpu');
             $table->string('ram');

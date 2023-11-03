@@ -15,6 +15,7 @@ class Game extends Model
         "releaseDate",
         "price",
         "g_image",
+        "background_image",
         "processor",
         "gpu",
         "ram",

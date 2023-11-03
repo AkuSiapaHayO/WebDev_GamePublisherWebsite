@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\FranchiseController; 
+use App\Http\Controllers\GameController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +20,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('index');
 // });
 
-Route::get('/', [FranchiseController::class,'showRandomFranchises']);
+Route::get('/', [HomeController::class,'index']);
+
 

@@ -5,26 +5,26 @@
         <div class="slideshow">
             <div class="slideshow-slides">
                 <div class="slideshow-image">
-                    <img src="{{ asset('assets/images/games/assassins_creed_mirage.png') }}" alt="">
+                    <img src="{{ asset('assets/database/background/assassins_creed_mirage.png') }}" alt="">
                 </div>
                 <div class="slideshow-image">
-                    <img src="{{ asset('assets/images/games/anno_1800.jpg') }}" alt="">
+                    <img src="{{ asset('assets/database/background/anno_1800.jpg') }}" alt="">
                 </div>
                 <div class="slideshow-image">
-                    <img src="{{ asset('assets/images/games/avatar.jpg') }}" alt="">
+                    <img src="{{ asset('assets/database/background/avatar.jpg') }}" alt="">
                 </div>
                 <div class="slideshow-image">
-                    <img src="{{ asset('assets/images/games/farcry_6.jpg') }}" alt="">
+                    <img src="{{ asset('assets/database/background/farcry_6.jpg') }}" alt="">
                 </div>
                 <div class="slideshow-image">
-                    <img src="{{ asset('assets/images/games/red_dead_redemption_2.jpg') }}" alt="">
+                    <img src="{{ asset('assets/database/background/red_dead_redemption_2.jpg') }}" alt="">
 
                 </div>
                 <div class="slideshow-image">
-                    <img src="{{ asset('assets/images/games/warcraft_3_reforged.jpg') }}" alt="">
+                    <img src="{{ asset('assets/database/background/warcraft_3_reforged.jpg') }}" alt="">
                 </div>
                 <div class="slideshow-image">
-                    <img src="{{ asset('assets/images/games/resident_evil_4_remake.jpg') }}" alt="">
+                    <img src="{{ asset('assets/database/background/resident_evil_4_remake.jpg') }}" alt="">
                 </div>
             </div>
             <div class="slideshow-buttons">
@@ -54,11 +54,62 @@
                 </a>
             </div>
             <div class="content-1-image">
-                <img src="{{ asset('assets/images/games/ubisoft_games.jpg') }}" alt="">
+                <img src="{{ asset('assets/images/ubisoft_games.jpg') }}" alt="">
             </div>
         </div>
     </section>
 
+    <section class="content-3">
+        <div class="content-3-slideshow">
+            <div class="content-3-slideshow-slides">
+                @foreach ($randomGames as $i => $game)
+                    <div class="content-3-slideshow-content">
+                        <div class="content-3-slideshow-images">
+                            <img src="{{ asset('assets/database/background/' . $game->background_image) }}" alt="">
+                        </div>
+                        <div class="content-3-showcase">
+                            <div class="showcase-left">
+                                <div class="upper-left">
+                                    <p class="content-3-sub-heading">Featured Games</p>
+                                    <p class="content-3-heading">{{ $game->title }}</p>
+                                </div>
+                                <div class="lower-left">
+                                    <p class="content-3-text">
+                                        {{ $game->description }}
+                                    </p>
+                                    <a href="#">
+                                        <button class="content-3-details">More Details</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="showcase-center">
+                                <div>
+                                    <img src="{{ asset('assets/database/game/' . $game->g_image) }}" alt="">
+                                </div>
+                            </div>
+                            <div class="showcase-right">
+                                <p class="content-3-sub-heading-2">{{ $i + 1 }}/7</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <div class="content-3-buttons">
+                <button id="back">
+                    < </button>
+                        <button id="forward"> > </button>
+            </div>
+            <ul class="content-3-dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
 
     <section class="content-2">
         <div class="content-2-container">
@@ -106,58 +157,6 @@
                 </div>
                 <ul class="content-2-dots">
                     <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-3">
-        <div class="showcases">
-            <div class="showcase-background">
-                <img class="background" src="{{ asset('assets/images/games/anno_1800.jpg') }}" alt="">
-                <div class="showcase-1">
-                    <div class="foreach">
-                        <div class="showcase-left">
-                            <div class="upper-left">
-                                <p class="sub-heading">Featured Games</p>
-                                <p class="heading">Anno 1800</p>
-                            </div>
-                            <div class="lower-left">
-                                <p class="text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio quibusdam dolorem
-                                    molestiae cum autem, suscipit ducimus provident odio nulla, repellendus magni eius
-                                    perspiciatis quidem itaque optio quas, officia voluptas.
-                                </p>
-                                <a href="#">
-                                    <button class="content-3-buttons">More Details</button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="showcase-center">
-                            <div>
-                                <img src="{{ asset('assets/database/game/anno_1800.jpg') }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="showcase-right">
-                        <div class="upper-right">
-                            <p class="sub-heading2">1/7</p>
-                        </div>
-                        <div class="lower-right">
-                            <button id="prev-3">
-                                < </button>
-                                    <button id="next-3"> > </button>
-                        </div>
-                    </div>
-                </div>
-                <ul class="content-3-dots">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
                     <li></li>
                     <li></li>
                     <li></li>
