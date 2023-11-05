@@ -10,7 +10,7 @@ stickyNavbar();
 
 window.addEventListener("scroll", stickyNavbar);
 
-/* -------------- Slideshow -------------- */
+/* -------------- Slideshow 1 -------------- */
 
 let slider = document.querySelector('.slideshow .slideshow-slides');
 let items = document.querySelectorAll('.slideshow .slideshow-slides .slideshow-image');
@@ -67,7 +67,7 @@ window.onresize = function(event) {
     reloadSlider();
 };
 
-/* -------------- Slideshow Content 2 -------------- */
+/* -------------- Slideshow 2 -------------- */
 
 let slider2 = document.querySelector('.content-2-slideshow .content-2-slideshow-slides');
 let items2 = document.querySelectorAll('.content-2-slideshow .content-2-slideshow-slides .content-2-slideshow-image');
