@@ -340,8 +340,8 @@ li .last {
 
 /* from gavin */
 .content-1-image:hover img{
-    width: 750px;
-    transition: 200ms;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .content-1-text {
