@@ -21,12 +21,12 @@ let lengthItems = items.length - 1;
 let active = 0;
 let refreshInterval1;
 
-next.onclick = function(){
+next.onclick = function () {
     active = active + 1 <= lengthItems ? active + 1 : 0;
     reloadSlider();
     refreshAutoSlideInterval();
 }
-prev.onclick = function(){
+prev.onclick = function () {
     active = active - 1 >= 0 ? active - 1 : lengthItems;
     reloadSlider();
     refreshAutoSlideInterval();
@@ -46,7 +46,7 @@ function refreshAutoSlideInterval() {
 
 refreshAutoSlideInterval();
 
-function reloadSlider(){
+function reloadSlider() {
     slider.style.left = -items[active].offsetLeft + 'px';
     // 
     let last_active_dot = document.querySelector('.slideshow .dots li.active');
@@ -56,14 +56,14 @@ function reloadSlider(){
 }
 
 dots.forEach((li, key) => {
-    li.addEventListener('click', ()=>{
-         active = key;
-         reloadSlider();
-         refreshAutoSlideInterval();
+    li.addEventListener('click', () => {
+        active = key;
+        reloadSlider();
+        refreshAutoSlideInterval();
     })
 })
 
-window.onresize = function(event) {
+window.onresize = function (event) {
     reloadSlider();
 };
 
@@ -115,11 +115,11 @@ images2.forEach((li, key) => {
     });
 });
 
-window.onresize = function(event) {
+window.onresize = function (event) {
     reloadSlider2();
 };
 
-/* -------------- Slideshow 3 -------------- */
+// /* -------------- Slideshow 3 -------------- */
 
 let slider3 = document.querySelector('.content-3-slideshow .content-3-slideshow-slides');
 let items3 = document.querySelectorAll('.content-3-slideshow .content-3-slideshow-slides .content-3-slideshow-content');
@@ -130,12 +130,12 @@ let lengthItems3 = items3.length - 1;
 let active3 = 0;
 let refreshInterval3; // Declare the interval variable.
 
-next3.onclick = function(){
+next3.onclick = function () {
     active3 = active3 + 1 <= lengthItems3 ? active3 + 1 : 0;
     reloadSlider3();
     refreshAutoSlideInterval3();
 }
-prev3.onclick = function(){
+prev3.onclick = function () {
     active3 = active3 - 1 >= 0 ? active3 - 1 : lengthItems3;
     reloadSlider3();
     refreshAutoSlideInterval3();
@@ -156,7 +156,7 @@ function refreshAutoSlideInterval3() {
 // Initialize the auto slide interval.
 refreshAutoSlideInterval3();
 
-function reloadSlider3(){
+function reloadSlider3() {
     slider3.style.left = -items3[active3].offsetLeft + 'px';
     // 
     let last_active_dot = document.querySelector('.content-3-slideshow .content-3-dots li.active');
@@ -166,13 +166,13 @@ function reloadSlider3(){
 }
 
 dots3.forEach((li, key) => {
-    li.addEventListener('click', ()=>{
-         active3 = key;
-         reloadSlider3();
-         refreshAutoSlideInterval3();
+    li.addEventListener('click', () => {
+        active3 = key;
+        reloadSlider3();
+        refreshAutoSlideInterval3();
     })
 })
 
-window.onresize = function(event) {
+window.onresize = function (event) {
     reloadSlider3();
 };

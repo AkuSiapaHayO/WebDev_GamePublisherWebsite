@@ -17,6 +17,28 @@ class HomeController extends Controller
         $randomGames = Game::inRandomOrder()->distinct()->take(7)->get();
         $randomEvents = Event::inRandomOrder()->distinct()->take(7)->get();
 
-        return view('index', compact('randomGames', 'randomFranchises', 'randomEvents'));
+        return view(
+            'index',
+            compact('randomGames', 'randomFranchises', 'randomEvents'),
+            [
+                "javascript" => "app.js",
+                "css" => "style.css"
+            ]
+        );
+    }
+
+    public function index1()
+    {
+        $randomGames = Game::inRandomOrder()->distinct()->take(7)->get();
+        $games = Game::all();
+
+        return view(
+            'viewGames',
+            compact('randomGames', 'games'),
+            [
+                "javascript" => "app1.js",
+                "css" => "style1.css"
+            ]
+        );
     }
 }

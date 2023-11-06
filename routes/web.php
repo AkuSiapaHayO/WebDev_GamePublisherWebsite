@@ -21,6 +21,6 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [HomeController::class,'index']);
-Route::get('/viewGames', [GameController::class,'index']);
+Route::get('/viewGames', [HomeController::class,'index1']);
 
 

@@ -85,7 +85,9 @@
             <ul class="content-3-dots">
                 <li class="active"></li>
                 @foreach ($randomGames as $game)
+                @if ($i < 7) 
                     <li></li>
+                @endif
                 @endforeach
             </ul>
         </div>
