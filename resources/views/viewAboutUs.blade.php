@@ -1,7 +1,7 @@
 @extends('layouts.templateAboutUs')
 
 @section('layout')
-    <h1 class="ml-4 mt-4 text-white">Back to Home</h1>
+    <a href="/"><h1 class="ml-4 mt-4 text-white">Back to Home</h1></a>
     <div class="mx-8 flex flex-col justify-center items-center text-white">
         <img src="{{ asset('assets/images/logo/nexus.co_logo.png') }}" alt="Nexus Logo" class="w-48 justify-self-center">
         <h1>About Nexon</h1>
