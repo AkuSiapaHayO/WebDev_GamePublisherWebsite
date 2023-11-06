@@ -334,7 +334,14 @@ li .last {
 .content-1-image img {
     width: 100%;
     border-radius: 30px;
+    transition: 200ms;
     object-fit: cover;
+}
+
+/* from gavin */
+.content-1-image:hover img{
+    width: 750px;
+    transition: 200ms;
 }
 
 .content-1-text {
