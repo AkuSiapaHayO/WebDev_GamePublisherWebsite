@@ -5,11 +5,27 @@
         <div class="games-wrap">
             <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
                 @foreach ($randomGames as $game)
-                    <img class="image" src="{{ asset('assets/database/background/' . $game->background_image) }}"
-                        draggable="false" />
-                    {{-- <div class="image-text">
-                        <p>{{$game->title}}</p>
-                    </div> --}}
+                    <div class="image-wrap">
+                        <img class="image" src="{{ asset('assets/database/background/' . $game->background_image) }}"
+                            draggable="false" />
+                        <div class="text-wrap">
+                            <p class="price"><span>$ </span> {{$game->price}}.00</p>
+                            <p class="title">{{ $game->title }}</p>
+                            <div class="platform-genre">
+                                <div class="genres">
+                                    @php($genres = $game->genres)
+                                    @foreach ($genres as $genre)
+                                        <p class="genre">{{ $genre->name }}</p>
+                                    @endforeach
+                                </div>
+                                @php($platforms = $game->platforms)
+                                @foreach ($platforms as $platform)
+                                    <img class="platform-image"
+                                        src="{{ asset('assets/database/platform/' . $platform->p_image) }}" alt="">
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
                 @endforeach
             </div>
         </div>
@@ -20,7 +36,9 @@
     <div class="games-content">
         @foreach ($games as $game)
             <div class="game">
-                <img src="{{ asset('assets/database/game/' . $game->g_image) }}" alt="">
+                <a href="{{ route('game.detail', ['game' => $game->id]) }}">
+                    <img src="{{ asset('assets/database/game/' . $game->g_image) }}" alt="">
+                </a>
                 <p class="title">{{ $game->title }}</p>
             </div>
         @endforeach

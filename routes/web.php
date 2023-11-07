@@ -22,5 +22,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class,'index']);
 Route::get('/viewGames', [HomeController::class,'index1']);
+Route::get('/viewDetailGame/{game}', [HomeController::class, 'showGameDetails'])->name('game.detail');
 
 

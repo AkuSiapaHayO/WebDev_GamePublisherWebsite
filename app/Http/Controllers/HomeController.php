@@ -21,8 +21,8 @@ class HomeController extends Controller
             'index',
             compact('randomGames', 'randomFranchises', 'randomEvents'),
             [
-                "javascript" => "app.js",
-                "css" => "style.css"
+                "javascript" => "home.js",
+                "css" => "home.css"
             ]
         );
     }
@@ -36,8 +36,21 @@ class HomeController extends Controller
             'viewGames',
             compact('randomGames', 'games'),
             [
-                "javascript" => "app1.js",
-                "css" => "style1.css"
+                "javascript" => "viewGames.js",
+                "css" => "viewGames.css"
+            ]
+        );
+    }
+
+    public function showGameDetails($id) {
+        $game = Game::find($id);
+
+        return view(
+            'viewDetailGame',
+            compact('game'),
+            [
+                "javascript" => "detailGame.js",
+                "css" => "detailGame.css"
             ]
         );
     }
