@@ -455,7 +455,7 @@ class GameSeeder extends Seeder
             $platforms->where('name', 'Windows')->first()->id,
         ]);
 
-        $game1 = Game::create([
+        $game19 = Game::create([
             'title' => "Assassin's Creed Valhalla",
             'description' => 'Embark on a Viking saga as Eivor, exploring the Dark Ages of England. Raid, build, and lead your clan in epic battles and adventures.',
             'releaseDate' => '2020-11-10',
@@ -469,18 +469,18 @@ class GameSeeder extends Seeder
             'rating_id' => $ratings->where('name', 'Mature')->first()->id,
             'franchise_id' => $franchise->where('name', "Assassin's Creed")->first()->id,
         ]);
-        $game1->genres()->attach([
+        $game19->genres()->attach([
             $genres->where('name', 'Action')->first()->id, 
             $genres->where('name', 'Adventure')->first()->id, 
             $genres->where('name', 'Open-World')->first()->id
         ]);
-        $game1->platforms()->attach([
+        $game19->platforms()->attach([
             $platforms->where('name', 'Windows')->first()->id, 
             $platforms->where('name', 'Xbox')->first()->id,
             $platforms->where('name', 'PlayStation')->first()->id
         ]);
 
-        $game1 = Game::create([
+        $game20 = Game::create([
             'title' => "Assassin's Creed IV: Black Flag",
             'description' => 'Set sail as the pirate Edward Kenway in the Caribbean. Plunder ships, explore islands, and uncover the secrets of the Assassin Order.',
             'releaseDate' => '2013-10-29',
@@ -494,18 +494,18 @@ class GameSeeder extends Seeder
             'rating_id' => $ratings->where('name', 'Mature')->first()->id,
             'franchise_id' => $franchise->where('name', "Assassin's Creed")->first()->id,
         ]);
-        $game1->genres()->attach([
+        $game20->genres()->attach([
             $genres->where('name', 'Action')->first()->id, 
             $genres->where('name', 'Adventure')->first()->id, 
             $genres->where('name', 'Open-World')->first()->id
         ]);
-        $game1->platforms()->attach([
+        $game20->platforms()->attach([
             $platforms->where('name', 'Windows')->first()->id, 
             $platforms->where('name', 'Xbox')->first()->id,
             $platforms->where('name', 'PlayStation')->first()->id
         ]);
 
-        $game1 = Game::create([
+        $game21 = Game::create([
             'title' => "Assassin's Creed Syndicate",
             'description' => 'Step into Victorian London as the twin assassins Jacob and Evie Frye. Fight against the Templars and free the city from oppression.',
             'releaseDate' => '2015-10-23',
@@ -519,18 +519,18 @@ class GameSeeder extends Seeder
             'rating_id' => $ratings->where('name', 'Mature')->first()->id,
             'franchise_id' => $franchise->where('name', "Assassin's Creed")->first()->id,
         ]);
-        $game1->genres()->attach([
+        $game21->genres()->attach([
             $genres->where('name', 'Action')->first()->id, 
             $genres->where('name', 'Adventure')->first()->id, 
             $genres->where('name', 'Open-World')->first()->id
         ]);
-        $game1->platforms()->attach([
+        $game21->platforms()->attach([
             $platforms->where('name', 'Windows')->first()->id, 
             $platforms->where('name', 'Xbox')->first()->id,
             $platforms->where('name', 'PlayStation')->first()->id
         ]);
 
-        $game1 = Game::create([
+        $game22 = Game::create([
             'title' => "Assassin's Creed Odyssey",
             'description' => 'Explore ancient Greece as either Kassandra or Alexios. Embark on an epic journey, make choices, and uncover the secrets of your family and the First Civilization.',
             'releaseDate' => '2018-10-05',
@@ -544,18 +544,18 @@ class GameSeeder extends Seeder
             'rating_id' => $ratings->where('name', 'Mature')->first()->id,
             'franchise_id' => $franchise->where('name', "Assassin's Creed")->first()->id,
         ]);
-        $game1->genres()->attach([
+        $game22->genres()->attach([
             $genres->where('name', 'Action')->first()->id, 
             $genres->where('name', 'Adventure')->first()->id, 
             $genres->where('name', 'Open-World')->first()->id
         ]);
-        $game1->platforms()->attach([
+        $game22->platforms()->attach([
             $platforms->where('name', 'Windows')->first()->id, 
             $platforms->where('name', 'Xbox')->first()->id,
             $platforms->where('name', 'PlayStation')->first()->id
         ]);
 
-        $game1 = Game::create([
+        $game23 = Game::create([
             'title' => "Assassin's Creed Unity",
             'description' => 'Experience the French Revolution as Arno Dorian. Join the Brotherhood and uncover a conspiracy in the heart of Paris.',
             'releaseDate' => '2014-11-11',
@@ -569,18 +569,18 @@ class GameSeeder extends Seeder
             'rating_id' => $ratings->where('name', 'Mature')->first()->id,
             'franchise_id' => $franchise->where('name', "Assassin's Creed")->first()->id,
         ]);
-        $game1->genres()->attach([
+        $game23->genres()->attach([
             $genres->where('name', 'Action')->first()->id, 
             $genres->where('name', 'Adventure')->first()->id, 
             $genres->where('name', 'Open-World')->first()->id
         ]);
-        $game1->platforms()->attach([
+        $game23->platforms()->attach([
             $platforms->where('name', 'Windows')->first()->id, 
             $platforms->where('name', 'Xbox')->first()->id,
             $platforms->where('name', 'PlayStation')->first()->id
         ]);
 
-        $game1 = Game::create([
+        $game24 = Game::create([
             'title' => "Assassin's Creed Origins",
             'description' => 'Visit ancient Egypt as Bayek, a Medjay, and uncover the origins of the Assassin Brotherhood. Explore a vast open world and engage in epic battles.',
             'releaseDate' => '2017-10-27',
@@ -594,12 +594,12 @@ class GameSeeder extends Seeder
             'rating_id' => $ratings->where('name', 'Mature')->first()->id,
             'franchise_id' => $franchise->where('name', "Assassin's Creed")->first()->id,
         ]);
-        $game1->genres()->attach([
+        $game24->genres()->attach([
             $genres->where('name', 'Action')->first()->id, 
             $genres->where('name', 'Adventure')->first()->id, 
             $genres->where('name', 'Open-World')->first()->id
         ]);
-        $game1->platforms()->attach([
+        $game24->platforms()->attach([
             $platforms->where('name', 'Windows')->first()->id, 
             $platforms->where('name', 'Xbox')->first()->id,
             $platforms->where('name', 'PlayStation')->first()->id
