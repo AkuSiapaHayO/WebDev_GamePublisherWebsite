@@ -299,7 +299,7 @@ class GameSeeder extends Seeder
             'processor' => 'Intel Core 2 Duo',
             'gpu' => 'NVIDIA GeForce 8800',
             'ram' => '2GB',
-            'storage' => '12GB',,
+            'storage' => '12GB',
             'rating_id' => $ratings->where('name', 'Mature')->first()->id, 
             'franchise_id' => $franchise->where('name', 'Farcry')->first()->id,
         ]);
@@ -442,7 +442,7 @@ class GameSeeder extends Seeder
             'processor' => 'Intel Core 2 Duo',
             'gpu' => 'NVIDIA GeForce 8600M GT',
             'ram' => '2GB',
-            'storage' => '3GB',,
+            'storage' => '3GB',
             'rating_id' => $ratings->where('name', 'Everyone 10+')->first()->id,
             'franchise_id' => $franchise->where('name', "Warcraft")->first()->id,
             
@@ -465,7 +465,7 @@ class GameSeeder extends Seeder
             'processor' => 'Intel Core i7',
             'gpu' => 'NVIDIA GeForce RTX 2080',
             'ram' => '16GB',
-            'storage' => '50GB',,
+            'storage' => '50GB',
             'rating_id' => $ratings->where('name', 'Mature')->first()->id,
             'franchise_id' => $franchise->where('name', "Assassin's Creed")->first()->id,
         ]);
@@ -490,7 +490,7 @@ class GameSeeder extends Seeder
             'processor' => 'Intel Core i5',
             'gpu' => 'NVIDIA GeForce GTX 260',
             'ram' => '4GB',
-            'storage' => '30GB',,
+            'storage' => '30GB',
             'rating_id' => $ratings->where('name', 'Mature')->first()->id,
             'franchise_id' => $franchise->where('name', "Assassin's Creed")->first()->id,
         ]);

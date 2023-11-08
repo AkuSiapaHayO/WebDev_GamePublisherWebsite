@@ -26,7 +26,7 @@ body {
 
 #image-track {
     display: flex;
-    gap: 4vmin;
+    gap: 6vmin;
     user-select: none;
 }
 
@@ -137,6 +137,6 @@ body {
 }
 
 .game img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     border: 5px solid rgb(94, 136, 17, 1);
 }

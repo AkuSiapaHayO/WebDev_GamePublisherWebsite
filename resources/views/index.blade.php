@@ -6,7 +6,8 @@
         <div class="content-3-slideshow">
             <div class="content-3-slideshow-slides">
                 @foreach ($randomGames as $i => $game)
-                    <div class="content-3-slideshow-content">
+   
+   +             <div class="content-3-slideshow-content">
                         <div class="content-3-slideshow-images">
                             <img src="{{ asset('assets/database/background/' . $game->background_image) }}" alt="">
                         </div>
