@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('title');
             $table->text('description');
             $table->date('releaseDate');
-            $table->integer('price');
+            $table->float('price');
             $table->string('g_image');
             $table->string('background_image');
             $table->string('processor');

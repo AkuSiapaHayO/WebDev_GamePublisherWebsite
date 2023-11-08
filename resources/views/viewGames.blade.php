@@ -9,7 +9,7 @@
                         <img class="image" src="{{ asset('assets/database/background/' . $game->background_image) }}"
                             draggable="false" />
                         <div class="text-wrap">
-                            <p class="price"><span>$ </span> {{$game->price}}.00</p>
+                            <p class="price"><span>$ </span> {{$game->price}}</p>
                             <p class="title">{{ $game->title }}</p>
                             <div class="platform-genre">
                                 <div class="genres">

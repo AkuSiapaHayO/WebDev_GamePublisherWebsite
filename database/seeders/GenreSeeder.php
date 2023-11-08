@@ -23,5 +23,7 @@ class GenreSeeder extends Seeder
         Genre::create(['name' => 'Survival-Horror']);
         Genre::create(['name' => 'Open-World']);
         Genre::create(['name' => 'City-Building']);
+        Genre::create(['name' => 'MMORPG']);
+        Genre::create(['name' => 'Card Collectible']);
     }
 }

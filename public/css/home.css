@@ -6,94 +6,6 @@ body {
         #000000);
 }
 
-
-/* -------------- Slideshow -------------- */
-
-.content {
-    padding-bottom: 200px;
-    margin-top: 120px;
-}
-
-.slideshow {
-    width: 1100px;
-    max-width: 100%;
-    height: 600px;
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
-}
-
-.slideshow-slides {
-    position: absolute;
-    width: max-content;
-    height: 100%;
-    left: 0;
-    top: 0;
-    display: flex;
-    transition: 1s;
-}
-
-.slideshow-image img {
-    width: 1100px;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slideshow .slideshow-buttons {
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.slideshow .slideshow-buttons button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #0F0F0F;
-    color: white;
-    border: none;
-    font-family: monospace;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.slideshow .slideshow-buttons button:hover {
-    background-color: rgb(94, 136, 17);
-}
-
-.slideshow .dots {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    color: white;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.slideshow .dots li {
-    list-style: none;
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 5px;
-    transition: 0.5s;
-}
-
-.slideshow .dots li.active {
-    width: 30px;
-    background-color: rgb(94, 136, 17);
-}
-
 /* -------------- Content 1 -------------- */
 
 .content-1 {
@@ -413,6 +325,7 @@ body {
 
 .content-3 {
     padding-bottom: 200px;
+    margin-top: 120px;
 }
 
 .content-3-slideshow {
@@ -610,22 +523,6 @@ body {
 
 @media screen and (max-width: 1150px) {
 
-    /* -------------- Content -------------- */
-
-    .content {
-        margin-top: 100px;
-        padding-bottom: 150px;
-    }
-
-    .slideshow {
-        width: 850px;
-        height: 470px;
-    }
-
-    .slideshow-image img {
-        width: 850px;
-    }
-
     /* -------------- Content 1 -------------- */
 
     .content-1 {
@@ -799,22 +696,6 @@ body {
 }
 
 @media screen and (max-width: 950px) {
-
-    /* -------------- Content -------------- */
-
-    .content {
-        margin-top: 100px;
-        padding-bottom: 100px;
-    }
-
-    .slideshow {
-        width: 685px;
-        height: 385px;
-    }
-
-    .slideshow-image img {
-        width: 685px;
-    }
 
     /* -------------- Content 1 -------------- */
 
@@ -1002,113 +883,10 @@ body {
 
 @media screen and (max-width: 700px) {
 
-    /* -------------- Navbar -------------- */
-
-    header {
-        background-color: rgb(0, 0, 0, 0.7);
-        backdrop-filter: blur(5px);
-    }
-
-    .logo {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    header .logo {
-        height: 50px;
-        line-height: 50px;
-    }
-
-    header.scrolled .logo {
-        height: 50px;
-        line-height: 50px;
-    }
-
-    .navbar ul {
-        padding: 0 0;
-    }
-
-    nav img {
-        width: 25px;
-    }
-
-    .nav-link {
-        margin-left: 0;
-        margin-right: 25px;
-        font-size: 8px;
-    }
-
-    .search-bar {
-        margin-right: 20px;
-        border: none;
-        border-bottom: 1px solid white;
-        border-radius: 0;
-        align-items: center;
-    }
-
-    .search-bar img {
-        max-width: 8px;
-        margin-right: 8px;
-        margin-left: 6px;
-    }
-
-    .search-bar input {
-        padding: 0 0;
-        width: 100px;
-
-    }
-
-    .search-bar input::placeholder {
-        font-family: "Roboto", sans-serif;
-        font-size: 8px;
-        color: white;
-    }
-
-    .search-bar input:focus {
-        outline: none;
-    }
-
-    /* -------------- Content -------------- */
-
-    .content {
-        margin-top: 50px;
-        padding-bottom: 20px;
-    }
-
-    .slideshow {
-        width: 375px;
-        height: 210px;
-        border-radius: 0%;
-    }
-
-    .slideshow-image img {
-        width: 375px;
-    }
-
-    .slideshow .slideshow-buttons button {
-        width: 25px;
-        height: 25px;
-        font-size: 8px;
-    }
-
-    .slideshow .dots {
-        bottom: 7px;
-    }
-
-    .slideshow .dots li {
-        width: 5px;
-        height: 5px;
-        margin: 5px;
-    }
-
-    .slideshow .dots li.active {
-        width: 20px;
-    }
-
     /* -------------- Content 1 -------------- */
 
     .content-1 {
-        padding-bottom: 0px;
+        padding-bottom: 25px;
     }
 
     .content-1-container {
@@ -1149,7 +927,7 @@ body {
     /* -------------- Content 2 -------------- */
 
     .content-2 {
-        padding-bottom: 50px;
+        padding-bottom: 25px;
     }
 
     .content-2-container {
@@ -1275,6 +1053,11 @@ body {
 
     /* -------------- Content 3 -------------- */
 
+    .content-3 {
+        padding-bottom: 25px;
+        margin-top: 50px;
+    }
+
     .content-3-slideshow {
         width: 375px;
         height: 210px;
@@ -1295,10 +1078,6 @@ body {
         width: 335px;
         padding: 20px;
     }
-
-    /* .showcase-left {
-        justify-content: center;
-    } */
 
     .showcase-image {
         max-width: 85px;
@@ -1361,46 +1140,6 @@ body {
 
     .content-3-dots li.active {
         width: 10px;
-    }
-
-    /* -------------- Footer -------------- */
-
-    .footer-container {
-        padding: 40px 0px;
-    }
-
-    .footer-image img {
-        width: 50px;
-    }
-
-    .footer-container li {
-        margin-right: 5px;
-    }
-
-    .footer-container ul {
-        margin: 15px 0 0px 0;
-    }
-
-    .footer-content a {
-        font-size: 8px;
-        border-right: 1px solid black;
-        padding-right: 5px;
-        font-weight: 500;
-        letter-spacing: 0.3px;
-    }
-
-    li .last {
-        border: none;
-    }
-
-    .footer-copyright {
-        font-size: 7px;
-        margin-top: 10px;
-    }
-
-    .footer-copyright p {
-        margin: 1px 0;
-        letter-spacing: 0.4px;
     }
 }
 

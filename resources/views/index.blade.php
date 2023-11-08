@@ -1,46 +1,6 @@
 @extends('layouts.template')
 
 @section('layout')
-    <section class="content">
-
-        <div class="slideshow">
-            <div class="slideshow-slides">
-                @foreach ($randomEvents as $event)
-                    <div class="slideshow-image">
-                        <img src="{{ asset('assets/database/events/' . $event->e_image) }}" alt="">
-                    </div>
-                @endforeach
-            </div>
-            <div class="slideshow-buttons">
-                <button id="prev">
-                    < </button>
-                        <button id="next"> > </button>
-            </div>
-            <ul class="dots">
-                <li class="active"></li>
-                @foreach ($randomGames as $i => $game)
-                    @if ($i < 6)
-                        <li></li>
-                    @endif
-                @endforeach
-            </ul>
-        </div>
-    </section>
-
-    <section class="content-1">
-        <div class="content-1-container">
-            <div class="content-1-text">
-                <p class="content-1-heading">NEXUS ENTERTAINMENT</p>
-                <p class="content-1-sub-heading">Dive into the extraordinary world of gaming with us</p>
-                <a href="">
-                    <button class="content-1-buttons">Explore More</button>
-                </a>
-            </div>
-            <div class="content-1-image">
-                <img src="{{ asset('assets/images/ubisoft_games.jpg') }}" alt="">
-            </div>
-        </div>
-    </section>
 
     <section class="content-3">
         <div class="content-3-slideshow">
@@ -84,12 +44,27 @@
             </div>
             <ul class="content-3-dots">
                 <li class="active"></li>
-                @foreach ($randomGames as $game)
-                @if ($i < 7) 
-                    <li></li>
-                @endif
+                @foreach ($randomGames as $i => $game)
+                    @if ($i < 6)
+                        <li></li>
+                    @endif
                 @endforeach
             </ul>
+        </div>
+    </section>
+
+    <section class="content-1">
+        <div class="content-1-container">
+            <div class="content-1-text">
+                <p class="content-1-heading">NEXUS ENTERTAINMENT</p>
+                <p class="content-1-sub-heading">Dive into the extraordinary world of gaming with us</p>
+                <a href="">
+                    <button class="content-1-buttons">Explore More</button>
+                </a>
+            </div>
+            <div class="content-1-image">
+                <img src="{{ asset('assets/images/ubisoft_games.jpg') }}" alt="">
+            </div>
         </div>
     </section>
 

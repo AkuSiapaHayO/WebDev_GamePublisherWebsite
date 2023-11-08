@@ -13,10 +13,10 @@ class RatingSeeder extends Seeder
      */
     public function run(): void
     {
-        Rating::create(['name' => 'E', 'r_image' => 'E.svg']);
-        Rating::create(['name' => 'E10', 'r_image' => 'E10.svg']);
-        Rating::create(['name' => 'M', 'r_image' => 'M.svg']);
-        Rating::create(['name' => 'T', 'r_image' => 'T.svg']);
-        Rating::create(['name' => 'A', 'r_image' => 'A.svg']);
+        Rating::create(['name' => 'Everyone', 'r_image' => 'E.svg']);
+        Rating::create(['name' => 'Everyone 10+', 'r_image' => 'E10.svg']);
+        Rating::create(['name' => 'Mature', 'r_image' => 'M.svg']);
+        Rating::create(['name' => 'Teen', 'r_image' => 'T.svg']);
+        Rating::create(['name' => 'Adult', 'r_image' => 'A.svg']);
     }
 }

@@ -15,11 +15,10 @@ class HomeController extends Controller
     {
         $randomFranchises = Franchise::inRandomOrder()->distinct()->take(4)->get();
         $randomGames = Game::inRandomOrder()->distinct()->take(7)->get();
-        $randomEvents = Event::inRandomOrder()->distinct()->take(7)->get();
 
         return view(
             'index',
-            compact('randomGames', 'randomFranchises', 'randomEvents'),
+            compact('randomGames', 'randomFranchises'),
             [
                 "javascript" => "home.js",
                 "css" => "home.css"

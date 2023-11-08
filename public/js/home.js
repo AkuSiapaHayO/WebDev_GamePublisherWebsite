@@ -12,60 +12,60 @@ window.addEventListener("scroll", stickyNavbar);
 
 /* -------------- Slideshow 1 -------------- */
 
-let slider = document.querySelector('.slideshow .slideshow-slides');
-let items = document.querySelectorAll('.slideshow .slideshow-slides .slideshow-image');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-let dots = document.querySelectorAll('.slideshow .dots li');
-let lengthItems = items.length - 1;
-let active = 0;
-let refreshInterval1;
+// let slider = document.querySelector('.slideshow .slideshow-slides');
+// let items = document.querySelectorAll('.slideshow .slideshow-slides .slideshow-image');
+// let next = document.getElementById('next');
+// let prev = document.getElementById('prev');
+// let dots = document.querySelectorAll('.slideshow .dots li');
+// let lengthItems = items.length - 1;
+// let active = 0;
+// let refreshInterval1;
 
-next.onclick = function () {
-    active = active + 1 <= lengthItems ? active + 1 : 0;
-    reloadSlider();
-    refreshAutoSlideInterval();
-}
-prev.onclick = function () {
-    active = active - 1 >= 0 ? active - 1 : lengthItems;
-    reloadSlider();
-    refreshAutoSlideInterval();
-}
+// next.onclick = function () {
+//     active = active + 1 <= lengthItems ? active + 1 : 0;
+//     reloadSlider();
+//     refreshAutoSlideInterval();
+// }
+// prev.onclick = function () {
+//     active = active - 1 >= 0 ? active - 1 : lengthItems;
+//     reloadSlider();
+//     refreshAutoSlideInterval();
+// }
 
-function refreshAutoSlideInterval() {
-    clearInterval(refreshInterval1); // Clear the existing interval.
-    refreshInterval1 = setInterval(() => {
-        if (active < lengthItems) {
-            active++;
-        } else {
-            active = 0;
-        }
-        reloadSlider();
-    }, 5000);
-}
+// function refreshAutoSlideInterval() {
+//     clearInterval(refreshInterval1); // Clear the existing interval.
+//     refreshInterval1 = setInterval(() => {
+//         if (active < lengthItems) {
+//             active++;
+//         } else {
+//             active = 0;
+//         }
+//         reloadSlider();
+//     }, 5000);
+// }
 
-refreshAutoSlideInterval();
+// refreshAutoSlideInterval();
 
-function reloadSlider() {
-    slider.style.left = -items[active].offsetLeft + 'px';
-    // 
-    let last_active_dot = document.querySelector('.slideshow .dots li.active');
-    last_active_dot.classList.remove('active');
-    dots[active].classList.add('active');
+// function reloadSlider() {
+//     slider.style.left = -items[active].offsetLeft + 'px';
+//     // 
+//     let last_active_dot = document.querySelector('.slideshow .dots li.active');
+//     last_active_dot.classList.remove('active');
+//     dots[active].classList.add('active');
 
-}
+// }
 
-dots.forEach((li, key) => {
-    li.addEventListener('click', () => {
-        active = key;
-        reloadSlider();
-        refreshAutoSlideInterval();
-    })
-})
+// dots.forEach((li, key) => {
+//     li.addEventListener('click', () => {
+//         active = key;
+//         reloadSlider();
+//         refreshAutoSlideInterval();
+//     })
+// })
 
-window.onresize = function (event) {
-    reloadSlider();
-};
+// window.onresize = function (event) {
+//     reloadSlider();
+// };
 
 /* -------------- Slideshow 2 -------------- */
 

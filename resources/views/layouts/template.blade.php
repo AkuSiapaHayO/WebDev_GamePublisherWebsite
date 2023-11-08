@@ -11,6 +11,12 @@
     <style>
         /* -------------- Navbar -------------- */
 
+        :root {
+            --color-1: #0b0e16;
+            --color-2: rgb(94, 136, 17);
+            --color-3: rgb(170, 170, 170);
+        }
+
         body {
             margin: 0;
             overflow-x: hidden;
@@ -30,15 +36,16 @@
             top: 0;
             left: 0;
             width: 100%;
-            box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(15px);
             z-index: 10;
             transition: 0.3s;
         }
 
         header.scrolled {
-            background-color: var(--bg-color-transparent);
-            box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(15px);
         }
 
@@ -216,6 +223,115 @@
         .footer-copyright span {
             color: black;
             text-decoration: underline;
+        }
+
+        @media screen and (max-width: 700px) {
+
+            /* -------------- Navbar -------------- */
+
+            header {
+                background-color: rgb(0, 0, 0, 0.7);
+                backdrop-filter: blur(5px);
+            }
+
+            .logo {
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+
+            header .logo {
+                height: 50px;
+                line-height: 50px;
+            }
+
+            header.scrolled .logo {
+                height: 50px;
+                line-height: 50px;
+            }
+
+            .navbar ul {
+                padding: 0 0;
+            }
+
+            nav img {
+                width: 25px;
+            }
+
+            .nav-link {
+                margin-left: 0;
+                margin-right: 25px;
+                font-size: 8px;
+            }
+
+            .search-bar {
+                margin-right: 20px;
+                border: none;
+                border-bottom: 1px solid white;
+                border-radius: 0;
+                align-items: center;
+            }
+
+            .search-bar img {
+                max-width: 8px;
+                margin-right: 8px;
+                margin-left: 6px;
+            }
+
+            .search-bar input {
+                padding: 0 0;
+                width: 100px;
+
+            }
+
+            .search-bar input::placeholder {
+                font-family: "Roboto", sans-serif;
+                font-size: 8px;
+                color: white;
+            }
+
+            .search-bar input:focus {
+                outline: none;
+            }
+
+            /* -------------- Footer -------------- */
+
+            .footer-container {
+                padding: 40px 0px;
+            }
+
+            .footer-image img {
+                width: 50px;
+            }
+
+            .footer-container li {
+                margin-right: 5px;
+            }
+
+            .footer-container ul {
+                margin: 15px 0 0px 0;
+            }
+
+            .footer-content a {
+                font-size: 8px;
+                border-right: 1px solid black;
+                padding-right: 5px;
+                font-weight: 500;
+                letter-spacing: 0.3px;
+            }
+
+            li .last {
+                border: none;
+            }
+
+            .footer-copyright {
+                font-size: 7px;
+                margin-top: 10px;
+            }
+
+            .footer-copyright p {
+                margin: 1px 0;
+                letter-spacing: 0.4px;
+            }
         }
     </style>
 </head>
