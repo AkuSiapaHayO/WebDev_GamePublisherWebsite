@@ -15,7 +15,7 @@ const handleOnMove = e => {
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
         maxDelta = window.innerWidth / 1;
 
-    const percentage = (mouseDelta / maxDelta) * -50,
+    const percentage = (mouseDelta / maxDelta) * -20,
         nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
         nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
 
@@ -27,7 +27,7 @@ const handleOnMove = e => {
 
     for (const image of track.getElementsByClassName("image")) {
         image.animate({
-            objectPosition: `${80 + nextPercentage}% center`
+            objectPosition: `${100 + nextPercentage}% center`
         }, { duration: 1200, fill: "forwards" });
     }
 }

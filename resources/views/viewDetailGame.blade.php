@@ -8,10 +8,12 @@
                 <img src="{{ asset('assets/database/game/' . $game->g_image) }}" alt="">
                 <div class="content-details">
                     <p class="details-title">{{ $game->title }}</p>
-                    <div class="platform">
+                    <div class="platform1">
+                        @php($rating = $game->rating)
+                        <img class="rating-img" src="{{asset('assets/database/rating/' . $rating->r_image)}}" alt="">
                         @php($platforms = $game->platforms)
                         @foreach ($platforms as $platform)
-                            <img src="{{ asset('assets/database/platform/' . $platform->p_image) }}" alt="">
+                            <img class="platform-img" src="{{ asset('assets/database/platform/' . $platform->p_image) }}" alt="">
                         @endforeach
                     </div>
                     <p class="details-description">{{ $game->description }}</p>

@@ -5,7 +5,7 @@
         <div class="games-wrap">
             <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
                 @foreach ($randomGames as $game)
-                    <div class="image-wrap">
+                    <a href="{{ route('game.detail', ['game' => $game->id]) }}" class="image-wrap" draggable="false">
                         <img class="image" src="{{ asset('assets/database/background/' . $game->background_image) }}"
                             draggable="false" />
                         <div class="text-wrap">
@@ -25,7 +25,7 @@
                                 @endforeach
                             </div>
                         </div>
-                    </div>
+                    </a>
                 @endforeach
             </div>
         </div>
