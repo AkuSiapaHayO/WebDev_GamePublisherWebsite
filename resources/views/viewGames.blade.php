@@ -9,7 +9,7 @@
                         <img class="image" src="{{ asset('assets/database/background/' . $game->background_image) }}"
                             draggable="false" />
                         <div class="text-wrap">
-                            <p class="price"><span>$ </span> {{$game->price}}</p>
+                            <p class="price"><span>$ </span> {{ $game->price }}</p>
                             <p class="title">{{ $game->title }}</p>
                             <div class="platform-genre">
                                 <div class="genres">
@@ -32,6 +32,34 @@
     </div>
     <div class="filter">
         <h1 class="heading">Filter By :</h1>
+        <div class="filter-content">
+            <form action="/viewGames" method="GET">
+                <label for="genre">Genre:</label>
+                <select id="genre" name="genre">
+                    <option value="">All Genres</option>
+                    @foreach ($allGenres as $genre)
+                        <option value="{{ $genre->id }}">{{ $genre->name }}</option>
+                    @endforeach
+                </select>
+
+                <label for="platform">Platform:</label>
+                <select id="platform" name="platform">
+                    <option value="">All Platforms</option>
+                    @foreach ($allPlatforms as $platform)
+                        <option value="{{ $platform->id }}">{{ $platform->name }}</option>
+                    @endforeach
+                </select>
+
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating">
+                    <option value="">All Ratings</option>
+                    @foreach ($allRatings as $rating)
+                        <option value="{{ $rating->id }}">{{ $rating->name }}</option>
+                    @endforeach
+                </select>
+                <button type="submit">Filter</button>
+            </form>
+        </div>
     </div>
     <div class="games-content">
         @foreach ($games as $game)

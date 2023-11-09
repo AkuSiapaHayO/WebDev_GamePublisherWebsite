@@ -7,7 +7,7 @@ use App\Models\Game;
 use App\Models\Genre;
 use App\Models\Platform;
 use App\Models\Rating;
-use App\Models\Event;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -26,14 +26,38 @@ class HomeController extends Controller
         );
     }
 
-    public function index1()
+    public function index1(Request $request)
     {
+        $genreId = $request->get('genre');
+        $platformId = $request->get('platform');
+        $ratingId = $request->get('rating');
+
+        $games = Game::query();
+
+        if ($genreId) {
+            $games->whereHas('genres', function ($query) use ($genreId) {
+                $query->where('id', $genreId);
+            });
+        }
+
+        if ($platformId) {
+            $games->whereHas('platforms', function ($query) use ($platformId) {
+                $query->where('id', $platformId);
+            });
+        }
+
+        if ($ratingId) {
+            $games->where('rating_id', $ratingId);
+        }
+
         $randomGames = Game::inRandomOrder()->distinct()->take(7)->get();
-        $games = Game::all();
+        $allGenres = Genre::all();
+        $allPlatforms = Platform::all();
+        $allRatings = Rating::all();
 
         return view(
             'viewGames',
-            compact('randomGames', 'games'),
+            compact('randomGames', 'games', 'allGenres', 'allPlatforms', 'allRatings'),
             [
                 "javascript" => "viewGames.js",
                 "css" => "viewGames.css"
@@ -41,7 +65,8 @@ class HomeController extends Controller
         );
     }
 
-    public function showGameDetails($id) {
+    public function showGameDetails($id)
+    {
         $game = Game::find($id);
 
         return view(
