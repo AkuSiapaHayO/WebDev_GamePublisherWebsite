@@ -278,12 +278,66 @@ section {
 }
 
 @media screen and (max-width: 560px) {
+
+    .details-card img {
+        display: none;
+    }
+
+    .content-details {
+        margin-bottom: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .content-details .details-title {
+        font-size: 16px;
+        margin: 10px 0;
+        padding-left: 10px;
+    }
+
+    .details-price {
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+
+    .platform1 {
+        margin-bottom: 0px;
+    }
+
+    .platform1 .rating-img {
+        display: block;
+        width: 16px;
+        margin-right: 15px ;
+    }
+
+    .platform1 .platform-img {
+        display: block;
+        width: 16px;
+        margin-right: 10px;
+    }
+
+    .details-description {
+        display: none;
+    }
+
+    .details-genre .genre {
+        font-size: 12px;
+    }
+
+    section {
+        margin-top: 50px;
+    }
+
     .details-2 {
         padding: 20px 0;
     }
     
     .details-2 p {
-        font-size: 11px;
+        font-size: 10px;
+    }
+
+    .content .right p {
+        margin-right: 3px;
     }
 
     .content {
