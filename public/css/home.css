@@ -1148,47 +1148,51 @@ body {
     /* -------------- Content1 -------------- */
 
     .content-1-container {
-        max-width: 320px;
+        max-width: 280px;
     }
 
     .content-1-image {
-        width: 320px;
+        width: 280px;
         height: 180px;
+    }
+
+    .content-1-text {
+        margin-left: 20px;
     }
 
     /* -------------- Content -------------- */
 
     .slideshow {
-        width: 320px;
-        height: 180px;
+        width: 280px;
+        height: 160px;
         border-radius: 0%;
     }
 
     .slideshow-image img {
-        width: 320px;
+        width: 280px;
     }
 
     /* -------------- Content 3 -------------- */
 
     .content-3-slideshow {
-        width: 320px;
-        height: 180px;
+        width: 280px;
+        height: 160px;
         border-radius: 0%;
     }
 
     .content-3-slideshow-content {
-        width: 320px;
+        width: 280px;
     }
 
     .content-3-slideshow-images img {
-        width: 320px;
-        height: 180px;
+        width: 280px;
+        height: 160px;
     }
 
     .content-3-showcase {
-        height: 140px;
-        width: 280px;
-        padding: 20px;
+        height: 130px;
+        width: 250px;
+        padding: 15px;
     }
 
     .showcase-image {
@@ -1266,7 +1270,7 @@ body {
 
     .content-2-text {
         font-size: 6px;
-        max-width: 280px;
+        max-width: 230px;
     }
 
     .content-2-info {
@@ -1274,8 +1278,8 @@ body {
     }
 
     .content-2-slideshow {
-        width: 320px;
-        height: 200px;
+        width: 280px;
+        height: 230px;
     }
 
     .content-2-slideshow-slides {
@@ -1283,7 +1287,7 @@ body {
     }
 
     .content-2-slideshow-image {
-        width: 320px;
+        width: 280px;
         height: 100%;
     }
 

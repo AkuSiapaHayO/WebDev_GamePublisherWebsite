@@ -83,7 +83,7 @@ body {
     padding-left: 20px;
 }
 
-.all-franchises {
+.franchise-games {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     gap: 2rem;
@@ -91,14 +91,14 @@ body {
     margin: 2rem;
 }
 
-.franchise {
+.game {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.franchise img {
+.game img {
     width: 230px;
     height: 320px;
     border-radius: 15px;
@@ -106,12 +106,12 @@ body {
     border: 5px solid rgb(0, 0, 0, 0);
 }
 
-.franchise img:hover {
+.game img:hover {
     transform: scale(1.05);
     border: 5px solid var(--color-2);
 }
 
-.franchise p {
+.game .title {
     color: white;
     margin-top: 20px;
     font-size: 20px;
@@ -162,20 +162,20 @@ body {
         padding-left: 10px;
     }
 
-    .all-franchises {
+    .franchise-games {
         grid-template-columns: repeat(auto-fit, minmax(130px, auto));
         gap: 1rem;
         margin: 1rem;
     }
     
-    .franchise img {
+    .game img {
         width: 120px;
         height: 170px;
         border-radius: 8px;
     }
 
-    .franchise p {
-        font-size: 12px;
+    .game .title {
+        font-size: 10px;
         margin-top: 8px;
     }
     

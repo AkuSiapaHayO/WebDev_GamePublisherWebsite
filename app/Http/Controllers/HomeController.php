@@ -102,4 +102,18 @@ class HomeController extends Controller
             ]
         );
     }
+
+    public function showFranchiseDetails($id) 
+    {   
+        $games = Game::where('franchise_id', $id)->get();
+        $franchise = Franchise::find($id);
+        return view(
+            'viewDetailFranchise',
+            compact('franchise', 'games'),
+            [
+                'javascript'=> 'detailFranchise.js',
+                'css'=> 'detailFranchise.css'
+            ]
+        );
+    }
 }

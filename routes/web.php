@@ -24,4 +24,5 @@ Route::get('/', [HomeController::class,'index']);
 Route::get('/viewGames', [HomeController::class,'index1'])->name('viewGames');
 Route::get('/viewDetailGame/{game}', [HomeController::class, 'showGameDetails'])->name('game.detail');
 Route::get('/viewFranchises', [HomeController::class, 'index2']);
+Route::get('/viewDetailFranchise/{franchise}', [HomeController::class, 'showFranchiseDetails'])->name('franchise.detail');
 

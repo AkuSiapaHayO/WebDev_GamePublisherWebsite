@@ -169,6 +169,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .game .title {
@@ -302,5 +303,32 @@ body {
     
     .text-wrap .genre {
         font-size: 11px;
+    }
+
+    .games-content {
+        grid-template-columns: repeat(auto-fit, minmax(130px, auto));
+        gap: 1em;
+        margin: 1rem;
+    }
+    
+    .game img {
+        width: 120px;
+        height: 170px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    .show-platform img {
+        width: 17px;
+        height: auto;
+    }
+
+    .game .title {
+        font-size: 10px;
+    }
+
+    .show-genre p {
+        font-size: 8px;
+        margin-right: 5px;
     }
 }
