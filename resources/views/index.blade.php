@@ -21,7 +21,7 @@
                                     <p class="content-3-text">
                                         {{ $game->description }}
                                     </p>
-                                    <a href="#">
+                                    <a href="{{ route('game.detail', ['game' => $game->id]) }}">
                                         <button class="content-3-details">More Details</button>
                                     </a>
                                 </div>
@@ -59,7 +59,7 @@
             <div class="content-1-text">
                 <p class="content-1-heading">NEXUS ENTERTAINMENT</p>
                 <p class="content-1-sub-heading">Dive into the extraordinary world of gaming with us</p>
-                <a href="">
+                <a href="/viewGames">
                     <button class="content-1-buttons">Explore More</button>
                 </a>
             </div>

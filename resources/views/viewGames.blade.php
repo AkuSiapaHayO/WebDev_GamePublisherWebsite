@@ -32,34 +32,37 @@
     </div>
     <div class="filter">
         <h1 class="heading">Filter By :</h1>
-        <div class="filter-content">
-            <form action="/viewGames" method="GET">
-                <label for="genre">Genre:</label>
-                <select id="genre" name="genre">
-                    <option value="">All Genres</option>
-                    @foreach ($allGenres as $genre)
-                        <option value="{{ $genre->id }}">{{ $genre->name }}</option>
-                    @endforeach
-                </select>
+        <form action="{{ route('viewGames') }}" method="get">
+            <select class="filter-select" name="genre">
+                <option value="">Select Genre</option>
+                @foreach ($allGenres as $genre)
+                    <option value="{{ $genre->name }}">{{ $genre->name }}</option>
+                @endforeach
+            </select>
 
-                <label for="platform">Platform:</label>
-                <select id="platform" name="platform">
-                    <option value="">All Platforms</option>
-                    @foreach ($allPlatforms as $platform)
-                        <option value="{{ $platform->id }}">{{ $platform->name }}</option>
-                    @endforeach
-                </select>
+            <select class="filter-select" name="platform">
+                <option value="">Select Platform</option>
+                @foreach ($allPlatforms as $platform)
+                    <option value="{{ $platform->name }}">{{ $platform->name }}</option>
+                @endforeach
+            </select>
 
-                <label for="rating">Rating:</label>
-                <select id="rating" name="rating">
-                    <option value="">All Ratings</option>
-                    @foreach ($allRatings as $rating)
-                        <option value="{{ $rating->id }}">{{ $rating->name }}</option>
-                    @endforeach
-                </select>
-                <button type="submit">Filter</button>
-            </form>
-        </div>
+            <select class="filter-select" name="rating">
+                <option value="">Select Rating</option>
+                @foreach ($allRatings as $rating)
+                    <option value="{{ $rating->id }}">{{ $rating->name }}</option>
+                @endforeach
+            </select>
+
+            <select class="filter-select" name="franchise">
+                <option value="">Select Franchise</option>
+                @foreach ($allFranchises as $franchise)
+                    <option value="{{ $franchise->id }}">{{ $franchise->name }}</option>
+                @endforeach
+            </select>
+
+            <button class="submit" type="submit">Filter</button>
+        </form>
     </div>
     <div class="games-content">
         @foreach ($games as $game)

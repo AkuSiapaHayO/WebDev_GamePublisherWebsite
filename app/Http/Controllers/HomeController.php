@@ -28,36 +28,45 @@ class HomeController extends Controller
 
     public function index1(Request $request)
     {
-        $genreId = $request->get('genre');
-        $platformId = $request->get('platform');
-        $ratingId = $request->get('rating');
-
-        $games = Game::query();
-
-        if ($genreId) {
-            $games->whereHas('genres', function ($query) use ($genreId) {
-                $query->where('id', $genreId);
-            });
-        }
-
-        if ($platformId) {
-            $games->whereHas('platforms', function ($query) use ($platformId) {
-                $query->where('id', $platformId);
-            });
-        }
-
-        if ($ratingId) {
-            $games->where('rating_id', $ratingId);
-        }
-
+        $games = Game::all();
         $randomGames = Game::inRandomOrder()->distinct()->take(7)->get();
+
+        // Get all genres, platforms, ratings, and franchises for the dropdown menus
         $allGenres = Genre::all();
         $allPlatforms = Platform::all();
         $allRatings = Rating::all();
+        $allFranchises = Franchise::all();
+
+        // Check if filters are applied
+        $selectedGenre = $request->input('genre');
+        $selectedPlatform = $request->input('platform');
+        $selectedRating = $request->input('rating');
+        $selectedFranchise = $request->input('franchise');
+
+        // Apply filters if selected
+        if ($selectedGenre) {
+            $games = $games->filter(function ($game) use ($selectedGenre) {
+                return $game->genres->contains('name', $selectedGenre);
+            });
+        }
+    
+        if ($selectedPlatform) {
+            $games = $games->filter(function ($game) use ($selectedPlatform) {
+                return $game->platforms->contains('name', $selectedPlatform);
+            });
+        }
+    
+        if ($selectedRating) {
+            $games = $games->where('rating_id', $selectedRating);
+        }
+    
+        if ($selectedFranchise) {
+            $games = $games->where('franchise_id', $selectedFranchise);
+        }
 
         return view(
             'viewGames',
-            compact('randomGames', 'games', 'allGenres', 'allPlatforms', 'allRatings'),
+            compact('randomGames', 'games', 'allGenres', 'allPlatforms', 'allRatings', 'allFranchises'),
             [
                 "javascript" => "viewGames.js",
                 "css" => "viewGames.css"
@@ -75,6 +84,21 @@ class HomeController extends Controller
             [
                 "javascript" => "detailGame.js",
                 "css" => "detailGame.css"
+            ]
+        );
+    }
+
+    public function index2() 
+    {
+        $franchises = Franchise::all();
+        $randomFranchise = Franchise::inRandomOrder()->first();
+
+        return view(
+            'viewFranchises',
+            compact('franchises', 'randomFranchise'),
+            [
+                'javascript'=> 'viewFranchises.js',
+                'css'=> 'viewFranchises.css'
             ]
         );
     }

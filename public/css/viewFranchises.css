@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --color-1: #0b0e16;
+    --color-2: rgb(94, 136, 17);
+    --color-3: rgb(170, 170, 170);
+    --color-4: #020202;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--color-1);
+}
+
+.featured-franchise {
+    margin-top: 120px;
+    color: white;
+}

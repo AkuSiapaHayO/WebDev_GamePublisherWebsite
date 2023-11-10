@@ -22,6 +22,8 @@ class FranchiseSeeder extends Seeder
                             memorable characters, and intense battles between the Alliance and 
                             the Horde.",
             'f_image' => 'warcraft.png',
+            'poster_image'=> 'warcraft.jpg',
+            'background_image'=> 'warcraft_background.jpg',
         ]);
 
         Franchise::create([
@@ -32,6 +34,8 @@ class FranchiseSeeder extends Seeder
                             atmospheric tension, intricate puzzles, and thrilling narratives 
                             as they navigate through outbreaks of viral horrors.",
             'f_image' => 'resident_evil_umbrella.png',
+            'poster_image'=> 'resident_evil.jpg',
+            'background_image'=> 'resident_evil_background.jpg',
         ]);
 
         Franchise::create([
@@ -42,6 +46,8 @@ class FranchiseSeeder extends Seeder
                              ancient Egypt. With a mix of stealth, parkour, and historical intrigue, 
                              'Assassin's Creed' offers a unique and immersive experience.",
             'f_image' => 'assassins_creed_logo.png',
+            'poster_image'=> 'assassins_creed.jpg',
+            'background_image'=> 'assassins_creed_background.jpg',
         ]);
 
         Franchise::create([
@@ -52,6 +58,8 @@ class FranchiseSeeder extends Seeder
                             narratives as players confront dangerous adversaries and navigate 
                             the unpredictable wilderness.",
             'f_image' => 'farcry_logo.png',
+            'poster_image'=> 'far_cry.jpg',
+            'background_image'=> 'far_cry_background.jpg',
         ]); 
     }
 }

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('f_image');
+            $table->string('poster_image');
+            $table->string('background_image');
         });
     }
 

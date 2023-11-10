@@ -2,8 +2,8 @@
 
 body {
     background: linear-gradient(to bottom,
-        #101522,
-        #000000);
+            #101522,
+            #000000);
     font-family: "Roboto", sans-serif;
 }
 
@@ -106,9 +106,44 @@ body {
 
 .filter {
     margin: 2rem;
-    border: 5px solid var(--color-2);
     padding: 2rem;
     border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter select {
+    background-color: rgb(0, 0, 0, 0);
+    color: white;
+    transition: 0.3s;
+    border: none;
+    margin-left: 25px;
+    font-size: 17px;
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+    border: 10px;
+}
+
+.filter-select {
+    cursor: pointer;
+}
+
+.filter option {
+    background-color: rgb(0, 0, 0);
+}
+
+.filter button {
+    background-color: var(--color-2);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+    margin-left: 25px;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 17px;
 }
 
 .heading {
@@ -117,7 +152,7 @@ body {
     text-transform: uppercase;
     margin: 0 2rem 0 2rem;
     letter-spacing: 1px;
-    border-left: 8px solid rgb(94, 136, 17);
+    border-left: 8px solid var(--color-2);
     padding-left: 20px;
 }
 

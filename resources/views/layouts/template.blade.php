@@ -8,6 +8,7 @@
     <title>Nexus</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/images/logo/nexus.co_logo.png') }}">
     <link rel="stylesheet" href="{{ asset('css/' . $css) }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         /* -------------- Navbar -------------- */
 
@@ -161,6 +162,21 @@
             outline: none;
         }
 
+        .icons {
+            position: absolute;
+            right: 0;
+            margin: 0 30px;
+            display: none;
+            cursor: pointer;
+            font-size: 25px;
+            color: white;
+
+        }
+
+        #check {
+            display: none;
+        }
+
         /* -------------- Footer -------------- */
 
         .footer-container {
@@ -229,9 +245,53 @@
 
             /* -------------- Navbar -------------- */
 
-            header {
-                background-color: rgb(0, 0, 0, 0.7);
+            .icons {
+                display: inline-flex;
+            }
+
+            .icons #close-icon {
+                display: none;
+            }
+
+            #check:checked~.icons #menu-icon {
+                display: none;
+            }
+
+            #check:checked~.icons #close-icon {
+                display: block;
+            }
+
+            .navbar {
+                position: absolute;
+                width: 100%;
+                top: 100%;
+                left: 0;
+                height: 0;
+                background-color: rgb(0, 0, 0, 0.8);
                 backdrop-filter: blur(5px);
+                transition: .7s ease;
+                overflow: hidden
+            }
+
+            #check:checked~.navbar {
+                height: 100px;
+            }
+
+            .navbar ul {
+                display: block;
+                font-size: 1.1rem;
+                margin: 0.75rem 0;
+                text-align: center;
+
+            }
+
+            header {
+                background-color: rgb(0, 0, 0, 0.8);
+                backdrop-filter: blur(5px);
+            }
+
+            header.scrolled {
+                background-color: rgba(0, 0, 0, 0.8);
             }
 
             .logo {
@@ -269,6 +329,7 @@
                 border-bottom: 1px solid white;
                 border-radius: 0;
                 align-items: center;
+                display: none
             }
 
             .search-bar img {
@@ -342,10 +403,16 @@
             <div class="logo">
                 <img src="{{ asset('assets/images/logo/nexus.co_logo.png') }}" alt="">
             </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="icons">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-x' id="close-icon"></i>
+            </label>
             <div class="navbar">
                 <ul>
                     <li><a class="nav-link" href="/">Home</a></li>
                     <li><a class="nav-link" href="/viewGames">Games</a></li>
+                    <li><a class="nav-link" href="/viewFranchises">Franchise</a></li>
                 </ul>
             </div>
             <div class="search-bar">
