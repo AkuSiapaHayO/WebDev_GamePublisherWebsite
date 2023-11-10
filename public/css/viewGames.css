@@ -168,8 +168,11 @@ body {
 .game {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+
+.game .title {
+    margin: 0px 0;
 }
 
 .game img {
@@ -184,4 +187,120 @@ body {
 .game img:hover {
     transform: scale(1.05);
     border: 5px solid rgb(94, 136, 17, 1);
+}
+
+.show-platform {
+    display: flex;
+    align-items: center ;
+}
+
+.show-platform img {
+    width: 25px;
+    height: auto;
+    margin: 0;
+}
+
+.show-genre {
+    display: flex;
+}
+
+.show-genre p {
+    color: var(--color-3);
+    margin: 5px 10px 5px 0;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1240px) {
+
+    .heading {
+        margin: 0;
+        padding-left: 12px;
+        font-size: 22px;
+    }
+
+    .filter {
+        margin: 2rem;
+        padding: 0;
+    }
+    
+    .filter select {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    
+    .filter button {
+        margin-left: 10px;
+        padding: 6px 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 852px) {
+
+    .heading {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter select {
+        margin-bottom: 10px;
+        font-size: 17px;
+    }
+
+    .filter button {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .games-slide {
+        margin-top: 70px;
+    }
+
+    .games-wrap {
+        padding-left: 15px;
+        height: 310px;
+    }
+
+    .image-wrap {
+        width: 200px;
+        height: 300px;
+    }
+
+    .text-wrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .text-wrap .price {
+        font-size: 20px;
+    }
+    
+    .text-wrap .title {
+        font-size: 20px;
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+    
+    .text-wrap .platform-image {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .text-wrap .genre {
+        font-size: 11px;
+    }
 }

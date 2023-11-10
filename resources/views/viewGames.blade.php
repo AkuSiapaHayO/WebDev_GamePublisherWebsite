@@ -71,6 +71,18 @@
                     <img src="{{ asset('assets/database/game/' . $game->g_image) }}" alt="">
                 </a>
                 <p class="title">{{ $game->title }}</p>
+                <div class="show-genre">
+                    @php($genres1 = $game->genres)
+                    @foreach ($genres1 as $genre)
+                        <p>{{$genre->name}}</p>
+                    @endforeach
+                </div>
+                <div class="show-platform">
+                    @php($platforms1 = $game->platforms)
+                    @foreach ($platforms1 as $platform1)
+                        <img src="{{asset('assets/database/platform/' . $platform1->p_image)}}" alt="">
+                    @endforeach
+                </div>
             </div>
         @endforeach
     </div>
