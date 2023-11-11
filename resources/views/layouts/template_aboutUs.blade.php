@@ -8,8 +8,7 @@
     <title>Nexus.co</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/images/logo/nexus.co_logo.png') }}">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/styleAbout.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about_us.css') }}">
 </head>
 <body>
 

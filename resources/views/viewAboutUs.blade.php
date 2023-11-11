@@ -1,14 +1,16 @@
-@extends('layouts.templateAboutUs')
+@extends('layouts.template_aboutUs')
 
 @section('layout')
     <div class="absolute w-full h-[48rem] -z-10">
         <div class="relative w-full h-[100%]">
-            <img src="{{ asset('assets/images/ubisoft_games.jpg') }}" alt="" class="absolute -z-10 opacity-30 -top-20 h-[48rem] w-full object-cover">
-            <div class="w-screen h-96 absolute -z-10 bottom-0" style="background: linear-gradient(to bottom, transparent, #202020, #202020);"></div>
+            <img src="{{ asset('assets/images/ubisoft_games.jpg') }}" alt=""
+                class="absolute -z-10 opacity-30 -top-20 h-[48rem] w-full object-cover">
+            <div class="w-screen h-96 absolute -z-10 bottom-0"
+                style="background: linear-gradient(to bottom, transparent, #202020, #202020);"></div>
         </div>
     </div>
-    
-    
+
+
 
     <a href="/">
         <h1 class="ml-32 mt-16 text-white font-semibold text-2xl hover:underline">Back to Home</h1>
@@ -35,6 +37,7 @@
         {{--  --}}
         <div class="flex flex-wrap w-full justify-center items-center mb-8">
             <x-aboutUs_point>
+                <x-slot name="image_path">{{ asset('assets/images/logo/nexus.co_logo.png') }}</x-slot>
                 <x-slot name="main_point">Innovation and Creativity</x-slot>
                 Innovation is at the core of everything we do. We're not content with following trends; we're here to set
                 them. Our team constantly explores new technologies, gameplay mechanics, and artistic styles to ensure our
@@ -62,15 +65,15 @@
             </x-aboutUs_point>
 
             <div
-                class="group rounded-md height w-[80%] h-72 flex flex-col justify-center items-center bg-[#5e8811] hover:bg-opacity-80 mx-4 mt-4 p-8">
-                <h1 class="group-hover:underline">The Future</h1>
+                class="relative group rounded-md height w-[80%] h-80 flex flex-col justify-center items-center bg-[#000000] hover:bg-opacity-60 m-4 p-8 pop-out">
+                <h1 class="absolute bottom-10 group-hover:static py-1 px-4 my-2 border-b-2 text-xl" style="border-color:#5e8811;">The Future</h1>
                 <p class="hidden group-hover:block text-center">
                     The journey has just begun. With a deep-seated passion for gaming, a thirst for innovation, and a
                     commitment to our players, we're excited about what the future holds. Our upcoming projects promise to
                     deliver even more excitement, adventures, and entertainment.
                     <br><br>
                     Thank you for joining us on this incredible gaming adventure. Whether you're a longtime fan or just
-                    discovering [Game Company Name] for the first time, we welcome you to our gaming family and invite you
+                    discovering Nexus.co for the first time, we welcome you to our gaming family and invite you
                     to explore the worlds we create. Together, we'll continue to shape the future of gaming.
                 </p>
             </div>

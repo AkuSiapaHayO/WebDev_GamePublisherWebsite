@@ -1,0 +1,95 @@
+/* *{
+    outline: 1px solid red;
+} */
+
+body {
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    background-color: #202020;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.custom-green{
+    background-color: (94, 136, 17);
+}
+
+.pop-out{
+    transition:300ms;
+}
+
+.pop-out:hover{
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+/* -- For the Footer -- */
+.footer-container {
+    background-color: white;
+    padding: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-image img {
+    width: 100px;
+}
+
+.footer-content ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+.footer-container li {
+    margin-right: 10px;
+}
+
+.footer-content a {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    border-right: 2px solid black;
+    padding-right: 10px;
+}
+
+li .last {
+    border: none;
+}
+
+.footer-content .line {
+    margin-right: 10px;
+}
+
+.footer-copyright {
+    font-size: 12px;
+}
+
+.footer-copyright-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-copyright-image img {
+    width: 12px;
+    margin-right: 2px;
+}
+
+.footer-copyright span {
+    color: black;
+    text-decoration: underline;
+}
