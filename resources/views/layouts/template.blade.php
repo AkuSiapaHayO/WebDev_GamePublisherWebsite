@@ -430,7 +430,7 @@
                 <img src="{{ asset('assets/images/logo/nexus.co.png') }}" alt="">
             </div>
             <ul>
-                <li><a href="#">ABOUT US</a></li>
+                <li><a href="viewAboutUs">ABOUT US</a></li>
                 <li><a href="#">CONTACT US</a></li>
                 <li><a href="#">COMMUNITY</a></li>
                 <li><a href="#">SUPPORT</a> </li>
