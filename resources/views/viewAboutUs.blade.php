@@ -1,4 +1,4 @@
-@extends('layouts.template_aboutUs')
+@extends('layouts.template_footer')
 
 @section('layout')
     <div class="absolute w-full h-[48rem] -z-10">
