@@ -8,9 +8,9 @@
     <title>Nexus</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/images/logo/nexus.co_logo.png') }}">
     <link rel="stylesheet" href="{{ asset('css/' . $css) }}">
-<?php   if(isset($tailwind) ? 'active' : ''){ ?>
-            <script src="https://cdn.tailwindcss.com"></script>
-<?php   } ?>
+    <?php   if(isset($tailwind) ? 'active' : ''){ ?>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <?php   } ?>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         /* -------------- Navbar -------------- */
