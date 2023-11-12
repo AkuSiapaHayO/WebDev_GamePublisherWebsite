@@ -9,13 +9,11 @@
                 style="background: linear-gradient(to bottom, transparent, #202020, #202020);"></div>
         </div>
     </div>
-
-
-
     <a href="/">
-        <h1 class="ml-32 mt-16 text-white font-semibold text-2xl hover:underline">Back to Home</h1>
+        <h1 class="ml-16 mt-8 md:ml-32 md:mt-16 text-white font-semibold text-lg md:text-2xl hover:underline">Back to Home</h1>
     </a>
-    <div class="mx-64 flex flex-col justify-center items-center text-white mb-16">
+
+    <div class="mx-16 md:mx-[18%] flex flex-col justify-center items-center text-white mb-16">
         <img src="{{ asset('assets/images/logo/nexus.co_logo.png') }}" alt="Nexus Logo" class="w-48 justify-self-center">
 
         <x-aboutUs_textBlock>
@@ -53,8 +51,8 @@
             <x-aboutUs_point>
                 <x-slot name="main_point">Community and Engagement</x-slot>
                 We believe in building strong, vibrant gaming communities around our titles. Our games are not just
-                products; they're living, breathing worlds that grow and evolve with the input of our players. Through
-                events, social media, and forums, we foster connections between players, creating a sense of belonging that
+                products; they're living, breathing worlds that grow and evolve with the input of our players. 
+                Through events, social media, and forums, we foster connections between players, creating a sense of belonging that
                 extends beyond the screen.
             </x-aboutUs_point>
             <x-aboutUs_point>
@@ -64,7 +62,18 @@
                 evident in every aspect of our games, from art and storytelling to gameplay mechanics and performance.
             </x-aboutUs_point>
 
-            <div
+            <x-aboutUs_point>
+                <x-slot name="main_point">The Future</x-slot>
+                    The journey has just begun. With a deep-seated passion for gaming, a thirst for innovation, and a
+                    commitment to our players, we're excited about what the future holds. Our upcoming projects promise to
+                    deliver even more excitement, adventures, and entertainment.
+                    <br><br>
+                    Thank you for joining us on this incredible gaming adventure. Whether you're a longtime fan or just
+                    discovering Nexus.co for the first time, we welcome you to our gaming family and invite you
+                    to explore the worlds we create. Together, we'll continue to shape the future of gaming.
+            </x-aboutUs_point>
+
+            {{-- <div
                 class="relative group rounded-md height w-[80%] h-80 flex flex-col justify-center items-center bg-[#000000] hover:bg-opacity-60 m-4 p-8 pop-out">
                 <h1 class="absolute bottom-10 group-hover:static py-1 px-4 my-2 border-b-2 text-xl" style="border-color:#5e8811;">The Future</h1>
                 <p class="hidden group-hover:block text-center">
@@ -76,7 +85,8 @@
                     discovering Nexus.co for the first time, we welcome you to our gaming family and invite you
                     to explore the worlds we create. Together, we'll continue to shape the future of gaming.
                 </p>
-            </div>
+            </div> --}}
+            
         </div>
 
         <x-aboutUs_textBlock>
@@ -88,7 +98,7 @@
                     apart in the gaming industry.
         </x-aboutUs_textBlock>
 
-        <div class="flex justify-around w-full my-8">
+        <div class="flex flex-col sm:flex-row justify-center items-center lg:justify-around w-full my-8">
             <x-aboutUs_team>
                 <x-slot name="image_path">"{{ asset('assets/images/Nexus_founder.jpg') }}"</x-slot>
                 <x-slot name="position">Founder of Nexus</x-slot>

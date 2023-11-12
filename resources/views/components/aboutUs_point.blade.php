@@ -1,5 +1,9 @@
-<div 
-class="relative group rounded-md height w-[40%] h-96 flex flex-col justify-center items-center bg-[#000000] hover:bg-opacity-60 m-4 p-8 pop-out">
-    <h1 class="absolute bottom-10 group-hover:static py-1 px-4 my-2 border-b-2 text-xl" style="border-color:#5e8811;">{{ $main_point }}</h1>
-    <p class="hidden group-hover:block text-center">{{ $slot }}</p>
+<div
+    class=
+"relative group rounded-md w-[69%] flex flex-col justify-center items-center bg-[#000000] m-4 px-4 py-16
+hover:py-4 hover:bg-opacity-60 hover:min-h-fit
+lg:h-96 lg:w-[45%] lg:p-4">
+    <h1 class="absolute bottom-0 lg:bottom-10 group-hover:static lg:py-1 px-2 my-2 border-b-2 text-sm md:text-md lg:text-lg whitespace-nowrap"
+        style="border-color:#5e8811;">{{ $main_point }}</h1>
+    <p class="hidden group-hover:block text-center min-h-fit text-sm lg:text-base laeding-3">{{ $slot }}</p>
 </div>
