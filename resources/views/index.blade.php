@@ -108,8 +108,8 @@
                                     <p class="content-2-text">{{ $franchise->description }}</p>
                                 </div>
                                 <div class="content-2-cta">
-                                    <a href="#" class="content-2-btn">Franchise Details</a>
-                                    <a href="#" class="content-2-btn content-2-secondary-btn">See All Franchises</a>
+                                    <a href="{{ route('franchise.detail', ['franchise' => $franchise->id]) }}" class="content-2-btn">Franchise Details</a>
+                                    <a href="/viewFranchises" class="content-2-btn content-2-secondary-btn">See All Franchises</a>
                                 </div>
                             </div>
                         </div>

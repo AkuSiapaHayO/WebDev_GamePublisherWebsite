@@ -1,13 +1,13 @@
 @extends('layouts.template_footer')
 
 @section('layout')
-    <div class="absolute w-full h-[48rem] -z-10">
+    <div class="w-full h-[32rem] -z-10">
         <div class="relative w-full h-[100%]">
-            <img src="{{ asset('assets/images/ubisoft_games.jpg') }}" alt=""
-                class="absolute -z-10 opacity-30 -top-20 h-[48rem] w-full object-cover">
-            <div class="w-screen h-96 absolute -z-10 bottom-0"
-                style="background: linear-gradient(to bottom, transparent, #202020, #202020);"></div>
-        </div>
+            <img src="{{ asset('assets/images/Ubisoft_Plus.jpg') }}" alt=""
+                class="absolute -z-10 opacity-75 h-full w-full object-cover">
+            <div class="w-screen h-1/2 absolute -z-10 bottom-0"
+                style="background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8),  rgb(15, 15, 15, 1));"></div>
+        </div> 
     </div>
     <a href="/">
         <h1 class="ml-16 mt-8 md:ml-32 md:mt-16 text-white font-semibold text-lg md:text-2xl hover:underline">Back to Home</h1>
@@ -17,7 +17,7 @@
         <img src="{{ asset('assets/images/logo/nexus.co_logo.png') }}" alt="Nexus Logo" class="w-48 justify-self-center">
 
         <x-aboutUs_textBlock>
-            <x-slot name="title">About Nexon</x-slot>
+            <x-slot name="title">Welcome to Nexon Entertainment</x-slot>
             Welcome to <span>Nexus.co<span>, where passion for gaming meets innovation! Our journey began with a shared love
                     for video games and a dream to create experiences that would transport players to new worlds and ignite
                     their imaginations. Today, we stand as a dynamic and creative force in the gaming industry, committed to

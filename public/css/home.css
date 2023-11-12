@@ -392,6 +392,10 @@ body {
     justify-content: space-between;
 }
 
+.showcase-left .lower-left a {
+    cursor:  auto;
+}
+
 .showcase-center {
     display: flex;
     flex-direction: column;
@@ -452,6 +456,7 @@ body {
     text-align: center;
     text-transform: capitalize;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .content-3-details:hover {

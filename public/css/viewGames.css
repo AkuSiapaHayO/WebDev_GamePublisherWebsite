@@ -176,7 +176,7 @@ body {
     margin: 0px 0;
 }
 
-.game img {
+.game-image {
     width: 230px;
     height: 320px;
     border-radius: 10px;
@@ -185,7 +185,7 @@ body {
     margin-bottom: 8px;
 }
 
-.game img:hover {
+.game-image:hover {
     transform: scale(1.05);
     border: 5px solid rgb(94, 136, 17, 1);
 }
@@ -198,7 +198,7 @@ body {
 .show-platform img {
     width: 25px;
     height: auto;
-    margin: 0;
+    margin-right: 10px;
 }
 
 .show-genre {

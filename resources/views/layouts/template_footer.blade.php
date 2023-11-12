@@ -16,7 +16,7 @@
         body {
             font-family: "Roboto", sans-serif;
             overflow-x: hidden;
-            background-color: #202020;
+            background-color: #0f0f0f;
             padding: 0;
             margin: 0;
         }
@@ -151,8 +151,7 @@
             </div>
             <ul class = "pt-4">
                 <li><a href="viewAboutUs">ABOUT US</a></li>
-                {{-- <li><a href="viewContactUs">CONTACT US</a></li> --}}
-                <li><a href="viewCommunity">COMMUNITY</a></li>
+                <li><a href="viewContactUs">CONTACT US</a></li>
                 <li><a href="viewSupport">SUPPORT</a> </li>
                 <li><a class="last" href="viewCareers">CAREERS</a></li>
             </ul>

@@ -9,7 +9,9 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    background-color: var(--color-1);
+    background: linear-gradient(to bottom,
+            #101522,
+            #000000);
 }
 
 .featured-franchise {
