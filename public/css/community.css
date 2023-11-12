@@ -1,0 +1,13 @@
+:root{
+    --color-green: rgb(94, 136, 17);
+}
+
+.highlight-box{
+    border: transparent;
+    transition: 300ms;
+}
+
+.highlight-box:hover{
+    border-radius: 15px;
+    border: 2px solid var(--color-green);
+}

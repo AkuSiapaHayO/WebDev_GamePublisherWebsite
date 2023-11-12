@@ -1,20 +1,20 @@
 @extends('layouts.template_footer')
 
 @section('layout')
-    <div class="w-full h-[32rem] -z-10">
+    <div class="w-full h-[32rem] -z-10 absolute opacity-50">
         <div class="relative w-full h-[100%]">
             <img src="{{ asset('assets/images/Ubisoft_Plus.jpg') }}" alt=""
-                class="absolute -z-10 opacity-75 h-full w-full object-cover">
-            <div class="w-screen h-1/2 absolute -z-10 bottom-0"
+                class="absolute -z-10 opacity-75 h-full w-full object-cover -top-10 md:-top-20">
+            <div class="w-screen h-1/2 absolute -z-10 bottom-10 md:bottom-20"
                 style="background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8),  rgb(15, 15, 15, 1));"></div>
         </div> 
     </div>
     <a href="/">
-        <h1 class="ml-16 mt-8 md:ml-32 md:mt-16 text-white font-semibold text-lg md:text-2xl hover:underline">Back to Home</h1>
+        <h1 class="mb-12 ml-16 mt-8 md:ml-32 md:mt-16 text-white font-semibold text-lg md:text-2xl hover:underline">Back to Home</h1>
     </a>
 
     <div class="mx-16 md:mx-[18%] flex flex-col justify-center items-center text-white mb-16">
-        <img src="{{ asset('assets/images/logo/nexus.co_logo.png') }}" alt="Nexus Logo" class="w-48 justify-self-center">
+        <img src="{{ asset('assets/images/logo/nexus.co_logo.png') }}" alt="Nexus Logo" class="w-24 md:w-48 lg:w-64 justify-self-center">
 
         <x-aboutUs_textBlock>
             <x-slot name="title">Welcome to Nexon Entertainment</x-slot>

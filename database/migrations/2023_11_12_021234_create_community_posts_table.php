@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('community_posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+            $table->string('title');
+            $table->string('author');
+            $table->string('date');
+            $table->string('description');
+            $table->string('main_img')->nullable();
         });
     }
 

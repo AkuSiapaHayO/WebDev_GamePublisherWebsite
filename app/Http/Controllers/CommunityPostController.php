@@ -11,9 +11,15 @@ class CommunityPostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
+    public function index() {
+        $posts = CommunityPost::all();
+
+        return view("viewCommunity", compact("posts"),
+    [
+        'css'=>'community.css',
+        'javascript'=>'community.js',
+        'tailwind'=>'yes'
+    ]);
     }
 
     /**

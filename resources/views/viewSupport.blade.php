@@ -1,6 +1,9 @@
-@extends('layouts.template')
+@extends('layouts.template_footer')
 
 @section('layout')
+<a href="/">
+    <h1 class="mb-12 ml-16 mt-8 md:ml-32 md:mt-16 text-white font-semibold text-lg md:text-2xl hover:underline">Back to Home</h1>
+</a>
     <div class="container mx-auto max-w-[50%]">
         <!-- Header -->
         <div class="text-center mb-8 mt-28">

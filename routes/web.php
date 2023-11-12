@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommunityPostController;
 use App\Http\Controllers\FranchiseController; 
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
@@ -39,3 +40,12 @@ Route::view('/viewSupport', 'viewSupport',
     'javascript'=>'viewSupport.js',
     'tailwind'=>'yes'
 ]);
+
+// Route::view('/viewCommunity', 'viewCommunity',
+// [
+//     'css'=>"community.css",
+//     'javascript'=>'viewCommunity.js',
+//     'tailwind'=>'yes'
+// ]);
+
+Route::get('/viewCommunity',[CommunityPostController::class,'index']);
