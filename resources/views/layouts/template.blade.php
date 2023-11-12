@@ -65,8 +65,8 @@
         }
 
         header .logo {
-            height: 100px;
-            line-height: 100px;
+            height: 90px;
+            line-height: 90px;
         }
 
         header.scrolled .logo {
@@ -231,6 +231,10 @@
             font-size: 12px;
         }
 
+        .footer-copyright p {
+            margin: 0%
+        }
+
         .footer-copyright-image {
             display: flex;
             align-items: center;
@@ -280,7 +284,7 @@
             }
 
             #check:checked~.navbar {
-                height: 130px;
+                height: 150px;
             }
 
             .navbar ul {
@@ -388,8 +392,9 @@
                     <li><a class="nav-link" href="/">Home</a></li>
                     <li><a class="nav-link" href="/viewGames">Games</a></li>
                     <li><a class="nav-link" href="/viewFranchises">Franchise</a></li>
-                    <li><a class="nav-link" href="/viewAboutUs">About Us</a></li>
+                    <li><a class="nav-link" href="/viewAboutUs">About</a></li>
                     <li><a class="nav-link" href="/viewCommunity">Community</a></li>
+                    <li><a class="nav-link" href="/viewContactUs">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -403,11 +408,12 @@
                 <img src="{{ asset('assets/images/logo/nexus.co.png') }}" alt="">
             </div>
             <ul class = "pt-4">
-                <li><a href="viewAboutUs">ABOUT US</a></li>
+                <li><a href="viewGames">GAME</a></li>
+                <li><a href="viewFranchises">FRANCHISE</a></li>
+                <li><a href="viewAboutUs">ABOUT</a></li>
+                <li><a href="viewContactUs">CONTACT</a></li>
                 <li><a href="viewCommunity">COMMUNITY</a></li>
-                {{-- <li><a href="viewContactUs">CONTACT US</a></li> --}}
                 <li><a class="last" href="viewSupport">SUPPORT</a> </li>
-                {{-- <li><a class="last" href="viewCareers">CAREERS</a></li> --}}
             </ul>
             <div class="footer-copyright">
                 <div class="footer-copyright-image py-4">

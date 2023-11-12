@@ -151,12 +151,13 @@
             <div class="footer-image">
                 <img src="{{ asset('assets/images/logo/nexus.co.png') }}" alt="">
             </div>
-            <ul>
+            <ul class="my-4">
+                <li><a href="viewGames">GAME</a></li>
+                <li><a href="viewFranchises">FRANCHISE</a></li>
                 <li><a href="viewAboutUs">ABOUT US</a></li>
+                <li><a href="viewContactUs">CONTACT</a></li>
                 <li><a href="viewCommunity">COMMUNITY</a></li>
-                {{-- <li><a href="viewContactUs">CONTACT US</a></li> --}}
                 <li><a class="last" href="viewSupport">SUPPORT</a> </li>
-                {{-- <li><a class="last" href="viewCareers">CAREERS</a></li> --}}
             </ul>
             <div class="footer-copyright">
                 <div class="footer-copyright-image">

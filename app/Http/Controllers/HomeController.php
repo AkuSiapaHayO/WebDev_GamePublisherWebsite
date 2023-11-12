@@ -127,6 +127,17 @@ class HomeController extends Controller
         );
     }
 
+    public function indexContactUs()
+    {
+        return view(
+            'viewContactUs',
+            [
+                'css' => "contact.css",
+                'javascript' => 'contact.js',
+            ]
+        );
+    }
+
     public function showFranchiseDetails($id)
     {
         $games = Game::where('franchise_id', $id)->get();
