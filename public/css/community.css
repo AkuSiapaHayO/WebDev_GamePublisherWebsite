@@ -3,11 +3,20 @@
 }
 
 .highlight-box{
-    border: transparent;
+    border: 2px solid transparent;
     transition: 300ms;
 }
 
 .highlight-box:hover{
     border-radius: 15px;
     border: 2px solid var(--color-green);
+}
+
+.pop-out-img {
+    transition: 300ms;
+}
+
+.pop-out-img:hover img {
+    transform: scale(1.1);
+    transition: 300ms;
 }

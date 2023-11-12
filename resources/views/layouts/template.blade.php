@@ -404,8 +404,8 @@
                 <li><a href="viewAboutUs">ABOUT US</a></li>
                 <li><a href="viewCommunity">COMMUNITY</a></li>
                 {{-- <li><a href="viewContactUs">CONTACT US</a></li> --}}
-                <li><a href="viewSupport">SUPPORT</a> </li>
-                <li><a class="last" href="viewCareers">CAREERS</a></li>
+                <li><a class="last" href="viewSupport">SUPPORT</a> </li>
+                {{-- <li><a class="last" href="viewCareers">CAREERS</a></li> --}}
             </ul>
             <div class="footer-copyright">
                 <div class="footer-copyright-image py-4">
