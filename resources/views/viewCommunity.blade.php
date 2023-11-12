@@ -15,6 +15,7 @@
     <section class="flex flex-wrap justify-center items-center gap-4">
         @foreach ($posts as $post)
             <x-community_postBox>
+                <x-slot name="image_path">{{ asset('assets/database/community/' . $post->main_img) }}</x-slot>
                 <x-slot name="title"><?=$post->title?></x-slot>
                 <x-slot name="author"><?=$post->author?></x-slot>
                 <x-slot name="date"><?=$post->date?></x-slot>
