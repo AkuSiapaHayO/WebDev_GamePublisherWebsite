@@ -434,11 +434,11 @@
                 <img src="{{ asset('assets/images/logo/nexus.co.png') }}" alt="">
             </div>
             <ul class = "pt-4">
-                <li><a href="viewAboutUs">ABOUT US</a></li>
+                <li><a href="/viewAboutUs">ABOUT US</a></li>
                 {{-- <li><a href="viewContactUs">CONTACT US</a></li> --}}
-                <li><a href="viewCommunity">COMMUNITY</a></li>
-                <li><a href="viewSupport">SUPPORT</a> </li>
-                <li><a class="last" href="viewCareers">CAREERS</a></li>
+                <li><a href="/viewCommunity">COMMUNITY</a></li>
+                <li><a href="/viewSupport">SUPPORT</a> </li>
+                <li><a class="last" href="/viewCareers">CAREERS</a></li>
             </ul>
             <div class="footer-copyright">
                 <div class="footer-copyright-image py-4">

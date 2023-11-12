@@ -16,7 +16,7 @@
         body {
             font-family: "Roboto", sans-serif;
             overflow-x: hidden;
-            background-color: #202020;
+            background-color: #0f0f0f;
             padding: 0;
             margin: 0;
         }
