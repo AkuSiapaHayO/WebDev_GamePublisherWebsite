@@ -3,11 +3,11 @@
 @section('layout')
     <div class="w-full h-[32rem] -z-10">
         <div class="relative w-full h-[100%]">
-            <img src="{{ asset('assets/images/ubisoft_games.jpg') }}" alt=""
-                class="absolute -z-10 opacity-30 h-full w-full object-cover">
-            <div class="w-screen h-1/6 absolute -z-10 bottom-0"
-                style="background: linear-gradient(to bottom, transparent, #0f0f0f, #0f0f0f);"></div>
-        </div>
+            <img src="{{ asset('assets/images/Ubisoft_Plus.jpg') }}" alt=""
+                class="absolute -z-10 opacity-75 h-full w-full object-cover">
+            <div class="w-screen h-1/2 absolute -z-10 bottom-0"
+                style="background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8),  rgb(15, 15, 15, 1));"></div>
+        </div> 
     </div>
 
 
@@ -15,7 +15,7 @@
     <a href="/">
         <h1 class="ml-32 mt-16 text-white font-semibold text-2xl absolute -top-0">Back to Home</h1>
     </a>
-    <div class="w-2/3 mx-auto flex flex-col justify-center items-center text-white mb-16">
+    <div class="w-2/3 mx-auto flex flex-col justify-center items-center text-white mb-16 mt-8">
         {{-- <img src="{{ asset('assets/images/logo/nexus.co_logo.png') }}" alt="Nexus Logo" class="w-48 justify-self-center"> --}}
 
         <x-aboutUs_textBlock>

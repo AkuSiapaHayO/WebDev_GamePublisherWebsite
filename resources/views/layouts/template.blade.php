@@ -327,37 +327,6 @@
                 font-size: 8px;
             }
 
-            .search-bar {
-                margin-right: 20px;
-                border: none;
-                border-bottom: 1px solid white;
-                border-radius: 0;
-                align-items: center;
-                display: none
-            }
-
-            .search-bar img {
-                max-width: 8px;
-                margin-right: 8px;
-                margin-left: 6px;
-            }
-
-            .search-bar input {
-                padding: 0 0;
-                width: 100px;
-
-            }
-
-            .search-bar input::placeholder {
-                font-family: "Roboto", sans-serif;
-                font-size: 8px;
-                color: white;
-            }
-
-            .search-bar input:focus {
-                outline: none;
-            }
-
             /* -------------- Footer -------------- */
 
             .footer-container {
@@ -417,11 +386,9 @@
                     <li><a class="nav-link" href="/">Home</a></li>
                     <li><a class="nav-link" href="/viewGames">Games</a></li>
                     <li><a class="nav-link" href="/viewFranchises">Franchise</a></li>
+                    <li><a class="nav-link" href="/viewAboutUs">About Us</a></li>
+                    <li><a class="nav-link" href="/viewSupport">Support</a></li>
                 </ul>
-            </div>
-            <div class="search-bar">
-                <img src="{{ asset('assets/icons/search_icon_white.png') }}" alt="">
-                <input type="text" placeholder="Search game">
             </div>
         </nav>
     </header>
@@ -435,8 +402,7 @@
             </div>
             <ul class = "pt-4">
                 <li><a href="/viewAboutUs">ABOUT US</a></li>
-                {{-- <li><a href="viewContactUs">CONTACT US</a></li> --}}
-                <li><a href="/viewCommunity">COMMUNITY</a></li>
+                <li><a href="viewContactUs">CONTACT US</a></li>
                 <li><a href="/viewSupport">SUPPORT</a> </li>
                 <li><a class="last" href="/viewCareers">CAREERS</a></li>
             </ul>
