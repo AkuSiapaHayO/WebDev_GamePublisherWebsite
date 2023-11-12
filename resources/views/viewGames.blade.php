@@ -68,7 +68,7 @@
         @foreach ($games as $game)
             <div class="game">
                 <a href="{{ route('game.detail', ['game' => $game->id]) }}">
-                    <img src="{{ asset('assets/database/game/' . $game->g_image) }}" alt="">
+                    <img class="game-image" src="{{ asset('assets/database/game/' . $game->g_image) }}" alt="">
                 </a>
                 <p class="title">{{ $game->title }}</p>
                 <div class="show-genre">
