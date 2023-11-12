@@ -14,6 +14,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         /* -------------- Navbar -------------- */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 
         :root {
             --color-1: #0b0e16;
@@ -278,7 +280,7 @@
             }
 
             #check:checked~.navbar {
-                height: 100px;
+                height: 130px;
             }
 
             .navbar ul {
@@ -387,7 +389,7 @@
                     <li><a class="nav-link" href="/viewGames">Games</a></li>
                     <li><a class="nav-link" href="/viewFranchises">Franchise</a></li>
                     <li><a class="nav-link" href="/viewAboutUs">About Us</a></li>
-                    <li><a class="nav-link" href="/viewSupport">Support</a></li>
+                    <li><a class="nav-link" href="/viewCommunity">Community</a></li>
                 </ul>
             </div>
         </nav>

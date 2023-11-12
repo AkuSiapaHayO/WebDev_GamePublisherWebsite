@@ -39,7 +39,7 @@ class CommunityPostSeeder extends Seeder
 
         $post4 = CommunityPost::create([
             "title" => "Warcraft's Enduring Legacy: A Look Back and Forward",
-            "author" => "Jessica Parker",
+            "author" => "Morgan White",
             "description" => "Celebrate the legacy of the Warcraft series and its impact on the gaming industry, exploring the journey from the original to the Reforged edition.",
             "date" => "28 Feb 2023",
             "main_img" => "post4.jpg"
@@ -47,7 +47,7 @@ class CommunityPostSeeder extends Seeder
 
         $post5 = CommunityPost::create([
             "title" => "Far Cry Franchise: A Journey Through Chaos",
-            "author" => "Jessica Parker",
+            "author" => "Casey Martin",
             "description" => "Trace the chaotic evolution of the Far Cry series and its thematic exploration of disorder and revolution.",
             "date" => "29 Dec 2022",
             "main_img" => "post5.jpeg"
@@ -55,7 +55,7 @@ class CommunityPostSeeder extends Seeder
 
         $post6 = CommunityPost::create([
             "title" => "Pandora's Wonders: The Making of Avatar's Virtual Universe",
-            "author" => "Jessica Parker",
+            "author" => "Jamie Mitchell",
             "description" => "Go behind the scenes of the game development process for 'Avatar: Frontiers of Pandora' and discover the technology bringing Pandora to life.",
             "date" => "17 Nov 2022",
             "main_img" => "post6.jpeg"
@@ -63,7 +63,7 @@ class CommunityPostSeeder extends Seeder
 
         $post7 = CommunityPost::create([
             "title" => "Building Empires: Anno 1800 City Planning Strategies",
-            "author" => "Jessica Parker",
+            "author" => "Emily Johnson",
             "description" => "Learn the art of city planning and industrial development in Anno 1800 as we uncover the strategies behind building successful empires.",
             "date" => "22 Mar 2023",
             "main_img" => "post7.jpg"
@@ -71,7 +71,7 @@ class CommunityPostSeeder extends Seeder
 
         $post8 = CommunityPost::create([
             "title" => "Assassin's Creed Chronicles: A Journey Through Time",
-            "author" => "Jessica Parker",
+            "author" => "Alex Smith",
             "description" => "Explore the lesser-known chapters of the Assassin's Creed saga as we delve into the world of Assassin's Creed Chronicles.",
             "date" => "14 Apr 2023",
             "main_img" => "post8.jpg"
@@ -79,7 +79,7 @@ class CommunityPostSeeder extends Seeder
 
         $post9 = CommunityPost::create([
             "title" => "Raccoon City Reimagined: Resident Evil 2 Remake's Terrifying Triumph",
-            "author" => "Jessica Parker",
+            "author" => "Cameron Miller",
             "description" => "Navigate the harrowing streets of Raccoon City as we reflect on the success and scares of the Resident Evil 2 Remake.",
             "date" => "15 Feb 2023",
             "main_img" => "post9.jpeg"

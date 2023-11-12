@@ -11,3 +11,21 @@
     transition: 300ms;
 }
 
+.reveal p{
+    font-size:0px;
+    transition:300ms;
+}
+
+.reveal:hover p{
+    font-size: 0.75rem; /* 12px */
+    line-height: 1rem; /* 16px */
+    transition:300ms;
+}
+
+@media screen and (min-width:1024px) {
+    .reveal:hover p{
+        font-size: 0.9rem; /* 18px */
+        line-height: 1.5rem; /* 28px */
+        transition:300ms;
+    }
+}

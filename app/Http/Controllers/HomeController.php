@@ -49,17 +49,17 @@ class HomeController extends Controller
                 return $game->genres->contains('name', $selectedGenre);
             });
         }
-    
+
         if ($selectedPlatform) {
             $games = $games->filter(function ($game) use ($selectedPlatform) {
                 return $game->platforms->contains('name', $selectedPlatform);
             });
         }
-    
+
         if ($selectedRating) {
             $games = $games->where('rating_id', $selectedRating);
         }
-    
+
         if ($selectedFranchise) {
             $games = $games->where('franchise_id', $selectedFranchise);
         }
@@ -88,7 +88,7 @@ class HomeController extends Controller
         );
     }
 
-    public function index2() 
+    public function index2()
     {
         $franchises = Franchise::all();
         $randomFranchise = Franchise::inRandomOrder()->first();
@@ -97,22 +97,46 @@ class HomeController extends Controller
             'viewFranchises',
             compact('franchises', 'randomFranchise'),
             [
-                'javascript'=> 'viewFranchises.js',
-                'css'=> 'viewFranchises.css'
+                'javascript' => 'viewFranchises.js',
+                'css' => 'viewFranchises.css'
             ]
         );
     }
 
-    public function showFranchiseDetails($id) 
-    {   
+    public function indexAboutUs()
+    {
+        return view(
+            'viewAboutUs',
+            [
+                'css' => "about_us.css",
+                'javascript' => 'viewAboutUs.js',
+                'tailwind' => 'yes'
+            ]
+        );
+    }
+
+    public function indexSupport()
+    {
+        return view(
+            'viewSupport',
+            [
+                'css' => "support.css",
+                'javascript' => 'viewSupport.js',
+                'tailwind' => 'yes'
+            ]
+        );
+    }
+
+    public function showFranchiseDetails($id)
+    {
         $games = Game::where('franchise_id', $id)->get();
         $franchise = Franchise::find($id);
         return view(
             'viewDetailFranchise',
             compact('franchise', 'games'),
             [
-                'javascript'=> 'detailFranchise.js',
-                'css'=> 'detailFranchise.css'
+                'javascript' => 'detailFranchise.js',
+                'css' => 'detailFranchise.css'
             ]
         );
     }

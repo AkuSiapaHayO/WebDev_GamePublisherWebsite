@@ -1,9 +1,15 @@
 @extends('layouts.template_footer')
 
 @section('layout')
+<div class="absolute -top-0 w-full" 
+{{-- style="background-color: rgba(0, 0, 0, 0.1)" --}}
+>
     <a href="/">
-        <h1 class="mb-12 ml-8 mt-8 md:ml-32 md:mt-16 text-white font-semibold text-lg md:text-2xl hover:underline">Back</h1>
+        <h1
+            class="mb-4 ml-4 mt-4 text-white font-semibold text-xs sm:text-lg sm:mb-8 sm:mt-8 sm:ml-12 hover:animate-bounce">
+            Back</h1>
     </a>
+</div>
     <div class="container mx-auto max-w-[80%] md:max-w-[70%] lg:max-w-[50%]">
         <!-- Header -->
         <div class="text-center mb-8 mt-12">

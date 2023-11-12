@@ -1,9 +1,13 @@
 @extends('layouts.template_footer')
 
 @section('layout')
-    <div class="absolute -top-0 w-full" style="background-color: rgba(0, 0, 0, 0.1)">
+    <div class="absolute -top-0 w-full" 
+    {{-- style="background-color: rgba(0, 0, 0, 0.1)" --}}
+    >
         <a href="/">
-            <h1 class="mb-4 ml-4 mt-4 text-white font-semibold text-xs sm:text-lg sm:mb-8 sm:mt-8 sm:ml-12">Back</h1>
+            <h1
+                class="mb-4 ml-4 mt-4 text-white font-semibold text-xs sm:text-lg sm:mb-8 sm:mt-8 sm:ml-12 hover:animate-bounce">
+                Back</h1>
         </a>
     </div>
 
@@ -39,7 +43,6 @@
         {{--  --}}
         <div class="flex flex-wrap w-full justify-center items-center mb-8">
             <x-aboutUs_point>
-                <x-slot name="image_path">{{ asset('assets/images/logo/nexus.co_logo.png') }}</x-slot>
                 <x-slot name="main_point">Innovation and Creativity</x-slot>
                 Innovation is at the core of everything we do. We're not content with following trends; we're here to set
                 them. Our team constantly explores new technologies, gameplay mechanics, and artistic styles to ensure our
@@ -100,7 +103,6 @@
                 <x-slot name="position">Co-Founder of Nexus</x-slot>
                 <x-slot name="name">Gerald Gavin Lienardi</x-slot>
             </x-aboutUs_team>
-
         </div>
     </div>
 @endsection
