@@ -26,3 +26,16 @@ Route::get('/viewDetailGame/{game}', [HomeController::class, 'showGameDetails'])
 Route::get('/viewFranchises', [HomeController::class, 'index2']);
 Route::get('/viewDetailFranchise/{franchise}', [HomeController::class, 'showFranchiseDetails'])->name('franchise.detail');
 
+Route::view('/viewAboutUs', 'viewAboutUs',
+[
+    'css'=>"about_us.css",
+    'javascript'=>'viewAboutUs.js',
+    'tailwind'=>'yes'
+]);
+
+Route::view('/viewSupport', 'viewSupport',
+[
+    'css'=>"support.css",
+    'javascript'=>'viewSupport.js',
+    'tailwind'=>'yes'
+]);

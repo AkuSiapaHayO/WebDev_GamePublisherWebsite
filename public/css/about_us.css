@@ -1,0 +1,12 @@
+/* *{
+    outline: 1px solid red;
+} */
+
+.pop-out {
+    transition: 300ms;
+}
+
+.pop-out:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+}
