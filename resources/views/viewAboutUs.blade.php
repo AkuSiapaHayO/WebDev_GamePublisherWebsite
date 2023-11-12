@@ -1,23 +1,27 @@
 @extends('layouts.template_footer')
 
 @section('layout')
-    <div class="w-full h-[32rem] -z-10 absolute opacity-50">
+    <div class="absolute -top-0 w-full" style="background-color: rgba(0, 0, 0, 0.1)">
+        <a href="/">
+            <h1 class="mb-4 ml-4 mt-4 text-white font-semibold text-xs sm:text-lg sm:mb-8 sm:mt-8 sm:ml-12">Back</h1>
+        </a>
+    </div>
+
+    <div class="w-full h-[16rem] -z-10 absolute -top-0 opacity-50">
         <div class="relative w-full h-[100%]">
             <img src="{{ asset('assets/images/Ubisoft_Plus.jpg') }}" alt=""
-                class="absolute -z-10 opacity-75 h-full w-full object-cover -top-10 md:-top-20">
-            <div class="w-screen h-1/2 absolute -z-10 bottom-10 md:bottom-20"
-                style="background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8),  rgb(15, 15, 15, 1));"></div>
-        </div> 
+                class="absolute -z-10 opacity-75 h-full w-full object-cover">
+            <div class="w-screen h-1/2 absolute -z-10 -bottom-0"
+                style="background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8),  rgb(15, 15, 15, 1));">
+            </div>
+        </div>
     </div>
-    <a href="/">
-        <h1 class="mb-12 ml-16 mt-8 md:ml-32 md:mt-16 text-white font-semibold text-lg md:text-2xl hover:underline">Back to Home</h1>
-    </a>
 
-    <div class="mx-16 md:mx-[18%] flex flex-col justify-center items-center text-white mb-16">
-        <img src="{{ asset('assets/images/logo/nexus.co_logo.png') }}" alt="Nexus Logo" class="w-24 md:w-48 lg:w-64 justify-self-center">
+
+    <div class="mx-16 mt-16 flex flex-col justify-center items-center text-white mb-16 md:mx-[18%] sm:mt-32 lg:mt-64">
 
         <x-aboutUs_textBlock>
-            <x-slot name="title">Welcome to Nexon Entertainment</x-slot>
+            <x-slot name="title">Welcome to Nexon</x-slot>
             Welcome to <span>Nexus.co<span>, where passion for gaming meets innovation! Our journey began with a shared love
                     for video games and a dream to create experiences that would transport players to new worlds and ignite
                     their imaginations. Today, we stand as a dynamic and creative force in the gaming industry, committed to
@@ -51,8 +55,9 @@
             <x-aboutUs_point>
                 <x-slot name="main_point">Community and Engagement</x-slot>
                 We believe in building strong, vibrant gaming communities around our titles. Our games are not just
-                products; they're living, breathing worlds that grow and evolve with the input of our players. 
-                Through events, social media, and forums, we foster connections between players, creating a sense of belonging that
+                products; they're living, breathing worlds that grow and evolve with the input of our players.
+                Through events, social media, and forums, we foster connections between players, creating a sense of
+                belonging that
                 extends beyond the screen.
             </x-aboutUs_point>
             <x-aboutUs_point>
@@ -64,29 +69,14 @@
 
             <x-aboutUs_point>
                 <x-slot name="main_point">The Future</x-slot>
-                    The journey has just begun. With a deep-seated passion for gaming, a thirst for innovation, and a
-                    commitment to our players, we're excited about what the future holds. Our upcoming projects promise to
-                    deliver even more excitement, adventures, and entertainment.
-                    <br><br>
-                    Thank you for joining us on this incredible gaming adventure. Whether you're a longtime fan or just
-                    discovering Nexus.co for the first time, we welcome you to our gaming family and invite you
-                    to explore the worlds we create. Together, we'll continue to shape the future of gaming.
+                The journey has just begun. With a deep-seated passion for gaming, a thirst for innovation, and a
+                commitment to our players, we're excited about what the future holds. Our upcoming projects promise to
+                deliver even more excitement, adventures, and entertainment.
+                <br><br>
+                Thank you for joining us on this incredible gaming adventure. Whether you're a longtime fan or just
+                discovering Nexus.co for the first time, we welcome you to our gaming family and invite you
+                to explore the worlds we create. Together, we'll continue to shape the future of gaming.
             </x-aboutUs_point>
-
-            {{-- <div
-                class="relative group rounded-md height w-[80%] h-80 flex flex-col justify-center items-center bg-[#000000] hover:bg-opacity-60 m-4 p-8 pop-out">
-                <h1 class="absolute bottom-10 group-hover:static py-1 px-4 my-2 border-b-2 text-xl" style="border-color:#5e8811;">The Future</h1>
-                <p class="hidden group-hover:block text-center">
-                    The journey has just begun. With a deep-seated passion for gaming, a thirst for innovation, and a
-                    commitment to our players, we're excited about what the future holds. Our upcoming projects promise to
-                    deliver even more excitement, adventures, and entertainment.
-                    <br><br>
-                    Thank you for joining us on this incredible gaming adventure. Whether you're a longtime fan or just
-                    discovering Nexus.co for the first time, we welcome you to our gaming family and invite you
-                    to explore the worlds we create. Together, we'll continue to shape the future of gaming.
-                </p>
-            </div> --}}
-            
         </div>
 
         <x-aboutUs_textBlock>
