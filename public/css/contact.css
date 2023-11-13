@@ -120,6 +120,14 @@ body {
     transform: scale(1.2);
 }
 
+.box:hover .green-outline{
+    filter: drop-shadow(0 0 5px green); /* Adjust the color and size as needed */
+}
+
+.box:hover *{
+    color: var(--color-2);
+}
+
 @media screen and (max-width:1260px) {
     .box {
         padding: 20px;

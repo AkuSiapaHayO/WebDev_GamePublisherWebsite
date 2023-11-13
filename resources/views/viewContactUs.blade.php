@@ -6,21 +6,21 @@
         <div class="content-contact">
             <h1>Contact Us</h1>
             <div class="all-box">
-                <div class="box">
-                    <img src="{{asset('assets/icons/icon_chat.png')}}" alt="">
-                    <h3>Customer Support</h3>
-                    <p>We're available 24/7 to help with game, shop, and account issues</p>
-                </div>
-                <div class="box">
-                    <img src="{{asset('assets/icons/icon_media.png')}}" alt="">
-                    <h3>Press and Media</h3>
-                    <p>Looking for press releases, assets, or to get in touch with our public relation team? We can help.</p>
-                </div>
-                <div class="box">
-                    <img src="{{asset('assets/icons/icon_rocket.png')}}" alt="">
-                    <h3>Tours</h3>
-                    <p>Visit Nexus HQ in person! <br> Email:nexustours@gmail.com</p>
-                </div>
+                <x-contact_block>
+                    <x-slot name="image_path">"{{asset('assets/icons/icon_chat.png')}}"</x-slot>
+                    <x-slot name="title">Customer Support</x-slot>
+                    We're available 24/7 to help with game, shop, and account issues
+                </x-contact_block>
+                <x-contact_block>
+                    <x-slot name="image_path">"{{asset('assets/icons/icon_media.png')}}"</x-slot>
+                    <x-slot name="title">Press and Media</x-slot>
+                    Looking for press releases, assets, or to get in touch with our public relation team? We can help.
+                </x-contact_block>
+                <x-contact_block>
+                    <x-slot name="image_path">"{{asset('assets/icons/icon_rocket.png')}}"</x-slot>
+                    <x-slot name="title">Tours</x-slot>
+                    isit Nexus HQ in person! <br> Email:nexustours@gmail.com
+                </x-contact_block>
             </div>
         </div>
     </div>
