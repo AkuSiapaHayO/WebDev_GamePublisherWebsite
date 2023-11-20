@@ -14,14 +14,9 @@ return new class extends Migration
         Schema::create('game_genre', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            // $table->unsignedBigInteger('game_id');
-            // $table->unsignedBigInteger('genre_id');
 
             $table->foreignId('game_id')->constrained('games')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('genre_id')->constrained('genres')->onDelete('cascade')->onUpdate('cascade');
-
-            // $table->foreign('game_id')->references('id')->on('games')->onDelete('cascade')->onUpdate('cascade');
-            // $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
