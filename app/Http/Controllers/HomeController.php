@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function homeView()
     {
         $randomFranchises = Franchise::inRandomOrder()->distinct()->take(4)->get();
         $randomGames = Game::inRandomOrder()->distinct()->take(7)->get();
@@ -26,9 +26,9 @@ class HomeController extends Controller
         );
     }
 
-    public function index1(Request $request)
+    public function viewGames(Request $request)
     {
-        $games = Game::all();
+        $games = Game::paginate(5);
         $randomGames = Game::inRandomOrder()->distinct()->take(7)->get();
 
         // Get all genres, platforms, ratings, and franchises for the dropdown menus
@@ -64,9 +64,16 @@ class HomeController extends Controller
             $games = $games->where('franchise_id', $selectedFranchise);
         }
 
+        if ($request->has('search')) {
+            $searchTerm = $request->input('search');
+            $games = $games->filter(function ($game) use ($searchTerm) {
+                return stripos($game->title, $searchTerm) !== false;
+            });
+        }
+        
         return view(
             'viewGames',
-            compact('randomGames', 'games', 'allGenres', 'allPlatforms', 'allRatings', 'allFranchises'),
+            compact('randomGames', 'allGenres', 'games', 'allPlatforms', 'allRatings', 'allFranchises'),
             [
                 "javascript" => "viewGames.js",
                 "css" => "viewGames.css"

@@ -64,7 +64,14 @@
             <button class="submit" type="submit">Filter</button>
         </form>
     </div>
+    <div class="search-form">
+        <form action="/viewGames" method="GET">
+            <input type="search" placeholder="Search Game..." name="search">
+            <button type="submit" class="submit">Search</button>
+        </form>
+    </div>
     <div class="games-content">
+
         @foreach ($games as $game)
             <div class="game">
                 <a href="{{ route('game.detail', ['game' => $game->id]) }}">
@@ -74,16 +81,19 @@
                 <div class="show-genre">
                     @php($genres1 = $game->genres)
                     @foreach ($genres1 as $genre)
-                        <p>{{$genre->name}}</p>
+                        <p>{{ $genre->name }}</p>
                     @endforeach
                 </div>
                 <div class="show-platform">
                     @php($platforms1 = $game->platforms)
                     @foreach ($platforms1 as $platform1)
-                        <img src="{{asset('assets/database/platform/' . $platform1->p_image)}}" alt="">
+                        <img src="{{ asset('assets/database/platform/' . $platform1->p_image) }}" alt="">
                     @endforeach
                 </div>
             </div>
         @endforeach
+    </div>
+    <div>
+        {{ $games->links() }}
     </div>
 @endsection
