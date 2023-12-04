@@ -64,12 +64,6 @@
             <button class="submit" type="submit">Filter</button>
         </form>
     </div>
-    <div class="search-form">
-        <form action="/viewGames" method="GET">
-            <input type="search" placeholder="Search Game..." name="search">
-            <button type="submit" class="submit">Search</button>
-        </form>
-    </div>
     <div class="games-content">
 
         @foreach ($games as $game)
@@ -93,28 +87,4 @@
             </div>
         @endforeach
     </div>
-    <div class="custom-pagination">
-        <ul class="pagination">
-            @if($games->onFirstPage())
-                <li class="disabled"><span class="pagination-link">Previous</span></li>
-            @else
-                <li><a href="{{ $games->previousPageUrl() }}" class="pagination-link">Previous</a></li>
-            @endif
-    
-            @for ($i = 1; $i <= $games->lastPage(); $i++)
-                <li class="{{ ($games->currentPage() == $i) ? 'active' : '' }}">
-                    <a href="{{ $games->url($i) }}" class="pagination-link">{{ $i }}</a>
-                </li>
-            @endfor
-    
-            @if($games->currentPage() < $games->lastPage())
-                <li><a href="{{ $games->nextPageUrl() }}" class="pagination-link">Next</a></li>
-            @else
-                <li class="disabled"><span class="pagination-link">Next</span></li>
-            @endif
-        </ul>
-    </div>
-    {{-- <div class="custom-pagination">
-        {{ $games->links() }}
-    </div> --}}
 @endsection

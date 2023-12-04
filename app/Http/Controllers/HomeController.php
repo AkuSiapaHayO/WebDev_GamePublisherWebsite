@@ -28,7 +28,7 @@ class HomeController extends Controller
 
     public function viewGames(Request $request)
     {
-        $games = Game::paginate(5);
+        $games = Game::all();
         $randomGames = Game::inRandomOrder()->distinct()->take(7)->get();
 
         // Get all genres, platforms, ratings, and franchises for the dropdown menus
@@ -62,13 +62,6 @@ class HomeController extends Controller
 
         if ($selectedFranchise) {
             $games = $games->where('franchise_id', $selectedFranchise);
-        }
-
-        if ($request->has('search')) {
-            $searchTerm = $request->input('search');
-            $games = $games->filter(function ($game) use ($searchTerm) {
-                return stripos($game->title, $searchTerm) !== false;
-            });
         }
         
         return view(
