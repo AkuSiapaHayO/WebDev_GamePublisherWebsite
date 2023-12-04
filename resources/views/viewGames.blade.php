@@ -93,7 +93,28 @@
             </div>
         @endforeach
     </div>
-    <div>
-        {{ $games->links() }}
+    <div class="custom-pagination">
+        <ul class="pagination">
+            @if($games->onFirstPage())
+                <li class="disabled"><span class="pagination-link">Previous</span></li>
+            @else
+                <li><a href="{{ $games->previousPageUrl() }}" class="pagination-link">Previous</a></li>
+            @endif
+    
+            @for ($i = 1; $i <= $games->lastPage(); $i++)
+                <li class="{{ ($games->currentPage() == $i) ? 'active' : '' }}">
+                    <a href="{{ $games->url($i) }}" class="pagination-link">{{ $i }}</a>
+                </li>
+            @endfor
+    
+            @if($games->currentPage() < $games->lastPage())
+                <li><a href="{{ $games->nextPageUrl() }}" class="pagination-link">Next</a></li>
+            @else
+                <li class="disabled"><span class="pagination-link">Next</span></li>
+            @endif
+        </ul>
     </div>
+    {{-- <div class="custom-pagination">
+        {{ $games->links() }}
+    </div> --}}
 @endsection
